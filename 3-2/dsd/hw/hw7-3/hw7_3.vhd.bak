@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity hw7_3 is
+	port(inputs : in std_logic;
+		  sh/ld : in std_logic;
+		  din : in std_logic_vector(7 downto 0);
+		  r/l : in std_logic;
+		  sin : in std_logic;
+		  sout : out std_logic;
+		  qout : out std_logic;
+		  );
+end hw7_3;
+
+architecture arch of hw7_3 is
+signal d0,d1,d2,d3,q0,q1,q2,q3 : std_logic;

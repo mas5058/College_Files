@@ -1,0 +1,82 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_signed.all;
+
+entity toplevcount is
+    port(
+    clk                   : in std_logic;
+    reset                 : in std_logic;
+    enable                : in std_logic;
+    seven_seg_out         : out std_logic_vector (6 downto 0);
+    sum                   : out std_logic_vector (3 downto 0);
+    );
+end toplevcount;
+
+architecture arch of toplevcount is
+
+component generic_adder_beh is
+  generic (
+    bits    : integer := 4
+  );
+  port (
+    a       : in  std_logic_vector(bits-1 downto 0);
+    b       : in  std_logic_vector(bits-1 downto 0);
+    cin     : in  std_logic;
+    sum     : out std_logic_vector(bits-1 downto 0);
+    cout    : out std_logic
+  );
+end component;
+
+component generic_counter is
+  generic (
+    max_count       : integer := 3
+  );
+  port (
+    clk             : in  std_logic; 
+    reset           : in  std_logic;
+    output          : out std_logic
+  );  
+end component;  
+
+component seven_seg is 
+    port(inputs  : in std_logic_vector (3 downto 0);
+        clk     : in std_logic;
+        reset   : in std_logic;
+        hex0 : out std_logic_vector (6 downto 0)
+        );
+        end component;
+  
+ begin
+ adder:generic_adder_beh
+	port map(
+	a => sum_sig,
+	b => "0001",
+	sum => sum,
+	cin => '0',
+	cout=> open);
+ 
+ counter:generic_counter
+    port map(
+    clk => clk,
+    reset => reset,
+    output => sum_sig
+    );
+  
+  uut: seven_seg
+    port map(
+        inputs => sum_sig
+        clk => clk,
+        reset => reset,
+        hex0 => seven_seg_out
+        )
+	sumreg process
+	signal sumsig std_logic_vector(bits-1 downto 0);
+	begin
+	if reset = 1 then
+		sum_sig <= (others => '0');
+	elsif enable = 1 || rising_edge(clk) then
+		sum_sig <= sum;
+	end if;
+	
+		

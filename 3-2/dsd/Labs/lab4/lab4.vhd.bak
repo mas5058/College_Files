@@ -1,0 +1,71 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity lab4case is 
+	port(a,b,c,d,e,b6  : IN std_logic;
+			firstcase, lastcase, firstif, lastif  : out std_logic
+			);
+	end lab4case;
+	
+architecture arch of lab4case is 
+	signal inputs : STD_LOGIC_VECTOR(5 DOWNTO 0);
+	begin
+		inputs <= b6 & a & b & c & d & e & b6;
+		process (inputs)
+			begin
+				case inputs is
+					when "100001" => firstif <= '1';
+					when "100011" => firstif <= '1';
+					when "100101" => firstif <= '1';
+					when "101000" => firstif <= '1';
+					when "101001" => firstif <= '1';
+					when "101100" => firstif <= '1';
+					when "101101" => firstif <= '1';
+					when others => firstif <= '0';
+					end case;
+			case inputs is
+					when "100001" => lastif <= '1';
+					when "101100" => lastif <= '1';
+					when "101111" => lastif <= '1';
+					when "110010" => lastif <= '1';
+					when "110011" => lastif <= '1';
+					when others => lastif <= '0';
+				end case;
+				end process;
+		process (inputs)
+	 begin
+		if ((b6 = '1') and (a = '0') and (b = '0') and (c = '0') and (d = '0') and (e = '1')) then
+			firstcase <= '1';
+		elsif ((b6 = '1') and (a = '0') and (b = '0') and (c = '0') and (d = '1') and (e = '1')) then
+			firstcase <= '1';
+		elsif ((b6 = '1') and (a = '0') and (b = '0') and (c = '1') and (d = '0') and (e = '1')) then
+			firstcase <= '1';
+		elsif ((b6 = '1') and (a = '0') and (b = '1') and (c = '0') and (d = '0') and (e = '0')) then 
+			firstcase <= '1';
+		elsif ((b6 = '1') and (a = '0') and (b = '1') and (c = '0') and (d = '0') and (e = '1')) then
+			firstcase <= '1';
+		elsif ((b6 = '1') and (a = '0') and (b = '1') and (c = '1') and (d = '0') and (e = '0')) then
+			firstcase <= '1';
+		elsif ((b6 = '1') and (a = '0') and (b = '1') and (c = '1') and (d = '0') and (e = '1')) then
+			firstcase <= '1';
+		else
+			firstcase <= '0';
+		end if;
+		
+		if ((b6 = '1') and (a = '0') and (b = '0') and (c = '0') and (d = '0') and (e = '1')) then
+			lastcase <= '1';
+		elsif ((b6 = '1') and (a = '0') and (b = '1') and (c = '1') and (d = '0') and (e = '0')) then 
+			lastcase <= '1';
+		elsif ((b6 = '1') and (a = '0') and (b = '1') and (c = '1') and (d = '1') and (e = '1')) then
+			lastcase <= '1';
+		elsif ((b6 = '1') and (a = '1') and (b = '0') and (c = '0') and (d = '1') and (e = '0')) then
+			lastcase <= '1';
+		elsif ((b6 = '1') and (a = '1') and (b = '0') and (c = '0') and (d = '1') and (e = '1')) then
+			lastcase <= '1';
+		else
+			lastcase <= '0';
+		end if;
+	end process;
+			end arch;
+
+			

@@ -1,0 +1,97 @@
+entity lab10 is
+	port(dime, nickel, quarter: in std_logic;
+		 coin_return : in std_logic;
+		 dispense : in std_logic;
+		 clk : in std_logic;
+		 reset : in std_logic;
+		 changeback : out std_logic;
+		 red_bull : out std_logic;
+		 hex0, hex1 : out std_logic_vector(6 downto 0));
+	end lab10;
+
+architecture arch of lab10 is
+	type state_type is (wait1, nickel, quarter, dime, enough, change, excess, vend);
+	signal current, next_state : state_type;
+	signal money : std_logic_vector(6 downto 0);
+	component bcd
+		port(inputs  : in std_logic_vector (3 downto 0);
+		 hex : out std_logic_vector (6 downto 0)
+		 );
+	end component;
+	begin
+		
+	bcd2ssd0 : bcd port map(
+		inputs => bcd0,
+		hex => hex0);
+	
+	bcd2ssd1 : bcd port map(
+		inputs => bcd1,
+		hex => hex1);
+		
+	process(clk)
+	begin
+		if (clk = '1' and clk'event) then
+			current <= next_state;
+		end if;
+	end process;
+	process(next_state)
+	begin
+		case(next_state) is
+			when nickel => money <= money + "101";
+			when dime => money <= money + "1010";
+			when quater => money <= money + "11001";
+			when vend => money <= money - "01001011";
+			when others => money <= money;
+		end case;
+	end process;
+	
+	process(dime, nickel, quarter, coin_return, dispense, clk, reset, current)
+	begin 
+	if (current = enough or current = excess) then
+		if dime = '1' or quater = '1' or nickel = '1' then
+			if (money = "01001011") then
+				next_state <= excess;
+			end if;
+			if dispense = '1' then
+				next_state <= vend;
+			end if;
+			end if;
+	elsif current = vend then
+		if money = (others => '0') then
+			next_state <= wait1;
+		else
+			next_state <= change;
+		end if;
+	else
+			if dime = '1' then
+				if (money = "01001011") then
+					next_state <= enough;
+				else
+					next_state <= dime;
+				end if;
+			elsif quarter = '1' then
+				if (money = "01001011") then
+					next_state <= enough;
+				else
+					next_state <= quarter;
+				end if;
+			elsif nickel = '1' then
+				if (money = "01001011") then
+					next_state <= enough;
+				else
+					next_state <= nickel;
+			   end if;
+			end if;
+	  end if;
+			end if;
+	end process;
+	
+	process(next_state, money)
+	begin
+	if (money = "01001011") then
+		next_state <= enough;
+	else
+		next_state <= next_state;
+	end if;
+	end process;
+	end arch;

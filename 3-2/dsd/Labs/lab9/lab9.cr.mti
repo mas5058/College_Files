@@ -1,0 +1,45 @@
+E:/dsd/Labs/lab9/lab9.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/dsd/Labs/lab9/lab9.vhd
+Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity lab9
+-- Compiling architecture arch of lab9
+
+} {} {}} E:/dsd/Labs/lab9/counter.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/dsd/Labs/lab9/counter.vhd
+Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity counter
+-- Compiling architecture arch of counter
+
+} {} {}} E:/dsd/Labs/lab9/bcd.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/dsd/Labs/lab9/bcd.vhd
+Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity bcd
+-- Compiling architecture arch of bcd
+
+} {} {}} E:/dsd/Labs/lab9/BCD_stopwatch_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/dsd/Labs/lab9/BCD_stopwatch_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity bcd_stopwatch_tb
+-- Compiling architecture test of bcd_stopwatch_tb
+
+} {} {}}

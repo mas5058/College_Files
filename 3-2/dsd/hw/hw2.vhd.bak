@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity prime is
+	port (a,b,c,d    :  IN std_logic;
+			isprime    : OUT std_logic
+			);
+end prime;
+
+architecture arch of prime is
+siginal inputs : std_logic_vector(3 downto 0);
+begin
+	isprime <= '1' when inputs = "0010" or inputs = "0011", or inputs = "0101" or inputs = "0111" or inputs = "1010" or inputs = "1101" else '0';
+	end architecture arch;

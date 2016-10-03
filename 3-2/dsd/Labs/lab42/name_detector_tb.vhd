@@ -1,0 +1,119 @@
+--*****************************************************************************
+--***************************  VHDL Source Code  ******************************
+--*********  Copyright 2003, Rochester Institute of Technology  ***************
+--*****************************************************************************
+--
+--  DESIGNER NAME:  Jeanne Christman
+--
+--       LAB NAME:  Lab #4
+--
+--      FILE NAME:  name_detector_tb.vhd
+--
+--   DATE CREATED: 2/11/14
+--
+-------------------------------------------------------------------------------
+--
+--  DESCRIPTION
+--
+--    This test bench will provide input to test an ASCII name decoder. It
+--    inputs to the name detector bit6-bit0 of ASCII codes. This test bench does
+--    not do any testing - it only applies the stimuls to the UUT. The outputs
+--    need to be verified by visual inspection.
+--
+-------------------------------------------------------------------------------
+--
+--  REVISION HISTORY
+--
+--  _______________________________________________________________________
+-- |  DATE    | USER | Ver |  Description                                  |
+-- |==========+======+=====+================================================
+-- |          |      |     |
+-- | 2/11/14  | JWC  | 1.0 | Created
+-- | 2/11/15  | JWC  | 1.1 | added b5
+-- |          |      |     |
+--
+--*****************************************************************************
+--*****************************************************************************
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;           -- need for to_unsigned
+
+ENTITY name_detector_tb IS
+END ENTITY name_detector_tb;
+
+ARCHITECTURE test OF name_detector_tb IS
+
+    -- Component Declaration for the Unit Under Test (UUT)
+    COMPONENT lab42      --the component name must match your name_detector entity name
+        PORT (
+            a           : IN  std_logic;  --these port names must match your
+            b           : IN  std_logic;  --name detector port names
+            c           : IN  std_logic;
+            d           : IN  std_logic;
+            e           : IN  std_logic;
+            b5          : IN std_logic;
+            b6           : IN  std_logic;       
+            firstcase   : OUT std_logic;
+            lastcase    : OUT std_logic;
+            firstif     : OUT std_logic; 
+            lastif      : OUT std_logic            
+            ); 
+    END COMPONENT;
+
+
+    --Inputs
+    SIGNAL ascii : std_logic_vector(6 DOWNTO 0);
+
+    --Outputs
+    SIGNAL first1 : std_logic; --these names can be anything
+    SIGNAL last1  : std_logic;
+    --
+    SIGNAL first2 : std_logic;
+    SIGNAL last2  : std_logic;
+
+
+BEGIN
+    -- Instantiate the Unit Under Test (UUT)
+	 -- on left of => are the names of your component ports above
+	 -- on the right of => are the signals that they map to
+    uut : lab42 PORT MAP(
+		    b6           => ascii(6),
+		    b5           => ascii(5),
+        a           => ascii(4),
+        b           => ascii(3),
+        c           => ascii(2),
+        d           => ascii(1),
+        e           => ascii(0),
+        
+        --
+  
+        firstcase   => first2,
+        lastcase    => last2,
+        firstif     => first1,
+        lastif      => last1
+        );
+
+
+    ---------------------------------------------------------------------------
+    -- NAME: Stimulus
+    --
+    -- DESCRIPTION:
+    --    This process will apply the ASCII stimulus to the UUT
+    ---------------------------------------------------------------------------
+    stimulus : PROCESS
+    BEGIN
+        FOR i IN 0 TO 127 LOOP
+            ascii <= std_logic_vector(to_unsigned(i,7));
+            WAIT FOR 10 ns;
+        END LOOP;
+
+        -----------------------------------------------------------------------
+        -- This last WAIT statement needs to be here to prevent the PROCESS
+        -- sequence from restarting.
+        -----------------------------------------------------------------------
+        WAIT;
+        
+    END PROCESS stimulus;
+
+END ARCHITECTURE test;

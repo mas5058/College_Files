@@ -1,0 +1,13 @@
+F:/dsd/Labs/lab5/alu_tb.vhd {0 {vcom -work work -2002 -explicit F:/dsd/Labs/lab5/alu_tb.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vcom-42) Unsupported ModelSim library format for "F:/dsd/Labs/lab5/work". (Format: 4)
+
+** Error: VHDL Compiler exiting
+
+} {3.0 4.0 5.0 6.0} {}} F:/dsd/Labs/lab5/lab5.vhd {0 {vcom -work work -2002 -explicit F:/dsd/Labs/lab5/lab5.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+** Error: (vcom-42) Unsupported ModelSim library format for "F:/dsd/Labs/lab5/work". (Format: 4)
+
+** Error: VHDL Compiler exiting
+
+} {3.0 4.0 5.0 6.0} {}}

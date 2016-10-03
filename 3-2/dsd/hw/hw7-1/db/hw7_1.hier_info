@@ -1,0 +1,12 @@
+|hw7_1
+n_cp => qs[0].CLK
+n_cp => qs[1].CLK
+n_cp => qs[2].CLK
+n_cp => qs[3].CLK
+n_rd => process_0.IN1
+q[0] <= qs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= qs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= qs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= qs[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab7">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab7|alu:alu1|lpm_mult:Mult0" CBX_FILE_NAME="mult_uss.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab7|bcd:bcd1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab7|bcd:bcd1|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_65m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

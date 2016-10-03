@@ -1,0 +1,141 @@
+m255
+K4
+z0
+13
+cModel Technology
+dC:/software/Mentor/modeltech64_10.3c/examples
+Ebcd
+Z0 w1459955296
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 dE:/dsd/Labs/lab10
+Z7 8E:/dsd/Labs/lab10/bcd.vhd
+Z8 FE:/dsd/Labs/lab10/bcd.vhd
+l0
+L10
+V>]dW2cD`CbW6PgcNj7?eG2
+!s100 dE5aJWlz4OaPHK:6RaY3h0
+Z9 OL;C;10.3c;59
+32
+Z10 !s110 1462458336
+!i10b 1
+Z11 !s108 1462458335.499000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/dsd/Labs/lab10/bcd.vhd|
+Z13 !s107 E:/dsd/Labs/lab10/bcd.vhd|
+!i113 0
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1 NoCoverage 1
+Aarch
+R1
+R2
+R3
+R4
+R5
+DEx4 work 3 bcd 0 22 >]dW2cD`CbW6PgcNj7?eG2
+32
+R10
+l50
+L16
+V^aDzPTdNRKfYo<fonGeDm1
+!s100 _=<Oj<GY[8<P^fYSD3[HJ2
+R9
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Elab10
+Z16 w1462460262
+R1
+Z17 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R3
+R4
+R5
+R6
+Z18 8E:/dsd/Labs/lab10/lab10.vhd
+Z19 FE:/dsd/Labs/lab10/lab10.vhd
+l0
+L6
+V5e<]1813_IE47KKMV?>:21
+!s100 WL>DOzf6eja[T]iG]PeoD2
+R9
+32
+!s110 1462460308
+!i10b 1
+Z20 !s108 1462460307.817000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/dsd/Labs/lab10/lab10.vhd|
+Z22 !s107 E:/dsd/Labs/lab10/lab10.vhd|
+!i113 0
+R14
+R15
+Aarch
+R1
+R17
+R3
+R4
+R5
+DEx4 work 5 lab10 0 22 5e<]1813_IE47KKMV?>:21
+32
+!s110 1462460310
+l26
+L17
+V0B>HBQ1MbLK:0:UDEE7G70
+!s100 gH;lTbH_TYNM_hMfPSNSW2
+R9
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R14
+R15
+Evending_tb_vhd
+Z23 w1461852560
+R3
+R1
+R17
+R4
+R5
+R6
+Z24 8E:/dsd/Labs/lab10/vending_machine_tb.vhd
+Z25 FE:/dsd/Labs/lab10/vending_machine_tb.vhd
+l0
+L58
+Voo?SV]26R5@gUmh`RaEZS1
+!s100 @cf5Vg?_TEDlGc6S=Ai=<0
+R9
+32
+R10
+!i10b 1
+Z26 !s108 1462458334.673000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/dsd/Labs/lab10/vending_machine_tb.vhd|
+Z28 !s107 E:/dsd/Labs/lab10/vending_machine_tb.vhd|
+!i113 0
+R14
+R15
+Abehavior
+R3
+R1
+R17
+R4
+R5
+DEx4 work 14 vending_tb_vhd 0 22 oo?SV]26R5@gUmh`RaEZS1
+32
+R10
+l99
+L61
+V37`RI4@K97R7PjfV4R6<J1
+!s100 U>`cNE8PF[=M77e29lUH`2
+R9
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R14
+R15

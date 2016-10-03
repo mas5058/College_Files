@@ -1,0 +1,23 @@
+# Disk DescriptorFile
+version=1
+encoding="windows-1252"
+CID=1a5f2159
+parentCID=5d4d4b46
+isNativeSnapshot="no"
+createType="twoGbMaxExtentSparse"
+parentFileNameHint="C:\Virtual Machines\Windows Server 2012\Windows Server 2012-000001.vmdk"
+# Extent description
+RW 8304640 SPARSE "Windows Server 2012-cl1-s001.vmdk"
+RW 8304640 SPARSE "Windows Server 2012-cl1-s002.vmdk"
+RW 8304640 SPARSE "Windows Server 2012-cl1-s003.vmdk"
+RW 8304640 SPARSE "Windows Server 2012-cl1-s004.vmdk"
+RW 8304640 SPARSE "Windows Server 2012-cl1-s005.vmdk"
+RW 8304640 SPARSE "Windows Server 2012-cl1-s006.vmdk"
+RW 8304640 SPARSE "Windows Server 2012-cl1-s007.vmdk"
+RW 8304640 SPARSE "Windows Server 2012-cl1-s008.vmdk"
+RW 6963200 SPARSE "Windows Server 2012-cl1-s009.vmdk"
+
+# The Disk Data Base 
+#DDB
+
+ddb.longContentID = "f80a9a1d63037c383915b08b1a5f2159"

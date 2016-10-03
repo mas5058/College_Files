@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_signed.all;
+
+entity lab5 is 
+	port (a,b : in std_logic_vector (3 downto 0);
+		  oper : in std_logic_vector(2 downto 0);
+		  result    : out std_logic_vector(7 downto 0)
+	);
+	end lab5;
+	
+
+	architecture arch of lab5 is
+	begin
+	process (a,b,oper)
+	begin
+	case oper is
+		when "000" => result <= "0000" & a + b;
+		when "001" => result <= "0000" & (a + ((not b) + '1'));
+		when "010" => result <= (a * b);
+		when "011" => result <= "1111" & ((not a) + '1');
+		when "100" => result <= "0000" & (a and b);
+		when "101" => result <= "0000" & (a or b);
+		when "110" => result <= "0000" & (a xor b);
+		when "111" => result <= "1111" & (not a);
+		end case;
+		end process;
+		end arch;
+	-- if (oper = "000") then
+		-- result <= a + b;
+	-- elsif (oper = "001") then
+		-- result <= a + ((not b) + '1');
+	-- elsif (oper = "010") then
+		-- result <= a * b;
+	-- elsif (oper = "011") then
+		-- result <= (not a + '1');
+	-- elsif (oper = "100") then
+		-- result <= a and b;
+	-- elsif (oper = "101") then
+		-- result <= a or b;
+	-- elsif (oper = "110") then
+		-- result <= a xor b;
+	-- else 
+		-- result <= not a;
+		-- end if;
+		

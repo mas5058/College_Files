@@ -1,0 +1,109 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--archf1 is archf1
+archf1 = OUTPUT(A1L3);
+
+
+--archf2 is archf2
+archf2 = OUTPUT(A1L3);
+
+
+--archf3 is archf3
+archf3 = OUTPUT(A1L20);
+
+
+--archl1 is archl1
+archl1 = OUTPUT(A1L8);
+
+
+--archl2 is archl2
+archl2 = OUTPUT(A1L12);
+
+
+--archl3 is archl3
+archl3 = OUTPUT(A1L24);
+
+
+--e is e
+e = INPUT();
+
+
+--b is b
+b = INPUT();
+
+
+--c is c
+c = INPUT();
+
+
+--d is d
+d = INPUT();
+
+
+--A1L5 is archf2~0
+A1L5 = (b & (((!d)))) # (!b & (e & ((!d) # (!c))));
+
+
+--b6 is b6
+b6 = INPUT();
+
+
+--a is a
+a = INPUT();
+
+
+--A1L3 is archf1~0
+A1L3 = (A1L5 & (b6 & !a));
+
+
+--A1L19 is Mux0~0
+A1L19 = (b & (((!d)))) # (!b & (e & ((!c) # (!d))));
+
+
+--A1L20 is Mux0~1
+A1L20 = (b6 & (A1L19 & !a));
+
+
+--A1L21 is Mux1~0
+A1L21 = (b6 & (!b & !c));
+
+
+--A1L10 is archl2~0
+A1L10 = (A1L21 & ((d & (a)) # (!d & (!a & e))));
+
+
+--A1L11 is archl2~1
+A1L11 = (b & (c & (e $ (!d))));
+
+
+--A1L8 is archl1~0
+A1L8 = (A1L10) # ((b6 & A1L11));
+
+
+--A1L12 is archl2~2
+A1L12 = (A1L10) # ((b6 & (A1L11 & !a)));
+
+
+--A1L22 is Mux1~1
+A1L22 = (d & (a & A1L21));
+
+
+--A1L23 is Mux1~2
+A1L23 = (c & (b & (e $ (!d)))) # (!c & (e & (!d & !b)));
+
+
+--A1L24 is Mux1~3
+A1L24 = (A1L22) # ((b6 & (A1L23 & !a)));
+
+

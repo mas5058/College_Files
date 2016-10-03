@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/mas5058/Downloads/full_adder_single_bit_beh/full_adder_single_bit_beh/sim/script
+Efull_adder_single_bit_beh
+Z0 w1472572412
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dE:/College/four 1/hdl/labs/lab1/temp/full_adder_single_bit_beh/full_adder_single_bit_beh/sim/script
+Z4 8../../src/full_adder_single_bit_beh.vhd
+Z5 F../../src/full_adder_single_bit_beh.vhd
+l0
+L8
+VkIS924dHEM9Yg7Ha3NNHa0
+!s100 0AgCbFZ:<bHOQ[^^=WRMP3
+Z6 OL;C;10.5b;63
+31
+Z7 !s110 1472572421
+!i10b 1
+Z8 !s108 1472572421.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|../../src/full_adder_single_bit_beh.vhd|
+Z10 !s107 ../../src/full_adder_single_bit_beh.vhd|
+!i113 0
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abeh
+R1
+R2
+DEx4 work 25 full_adder_single_bit_beh 0 22 kIS924dHEM9Yg7Ha3NNHa0
+31
+R7
+l19
+L18
+VWJ4mf?=IRLlVWFPKXeN`G1
+!s100 BnmUF4;=ojH5AQk6e24ZP1
+R6
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Efull_adder_single_bit_beh_tb
+Z13 w1472263328
+R1
+R2
+R3
+Z14 8../src/full_adder_single_bit_beh_tb.vhd
+Z15 F../src/full_adder_single_bit_beh_tb.vhd
+l0
+L8
+VR39eAB0`GfW:9BRV2[LTL2
+!s100 Q[@[NL[Bg@NUI4ZQ^zW@H2
+R6
+31
+Z16 !s110 1472572422
+!i10b 1
+Z17 !s108 1472572422.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|../src/full_adder_single_bit_beh_tb.vhd|
+Z19 !s107 ../src/full_adder_single_bit_beh_tb.vhd|
+!i113 0
+R11
+R12
+Aarch
+R1
+R2
+DEx4 work 28 full_adder_single_bit_beh_tb 0 22 R39eAB0`GfW:9BRV2[LTL2
+31
+R16
+l29
+L11
+VU:Bd@7K[UfD^816e8e[B02
+!s100 AWVb]NK;V6==F9K?eUcLZ0
+R6
+!i10b 1
+R17
+R18
+R19
+!i113 0
+R11
+R12

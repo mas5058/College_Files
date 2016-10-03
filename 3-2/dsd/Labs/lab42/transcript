@@ -1,0 +1,137 @@
+# Compile of lab42.vhd was successful.
+# Compile of name_detector_tb.vhd failed with 3 errors.
+# 2 compiles, 1 failed with 3 errors. 
+# Compile of lab42.vhd was successful.
+# Compile of name_detector_tb.vhd failed with 6 errors.
+# 2 compiles, 1 failed with 6 errors. 
+# Compile of name_detector_tb.vhd failed with 2 errors.
+# Compile of name_detector_tb.vhd was successful.
+vsim -gui -novopt work.name_detector_tb
+# vsim -gui -novopt work.name_detector_tb 
+# Loading std.standard
+# Refreshing E:/dsd/Labs/lab42/work.name_detector_tb(test)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.name_detector_tb(test)
+# Refreshing E:/dsd/Labs/lab42/work.lab42(arch)
+# Loading work.lab42(arch)
+add wave  \
+sim:/name_detector_tb/ascii \
+sim:/name_detector_tb/first1 \
+sim:/name_detector_tb/last1 \
+sim:/name_detector_tb/first2 \
+sim:/name_detector_tb/last2
+run
+# Causality operation skipped due to absence of debug database file
+run
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 640 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 650 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 660 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 670 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 680 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 690 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 700 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 710 ns  Iteration: 0  Instance: /name_detector_tb
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 720 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 730 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 740 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 750 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 760 ns  Iteration: 0  Instance: /name_detector_tb
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 770 ns  Iteration: 0  Instance: /name_detector_tb
+quit -sim
+# Compile of name_detector_tb.vhd was successful.
+vsim -gui -novopt work.name_detector_tb(test)
+# vsim -gui -novopt work.name_detector_tb(test) 
+# Loading std.standard
+# Refreshing E:/dsd/Labs/lab42/work.name_detector_tb(test)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.name_detector_tb(test)
+# Loading work.lab42(arch)
+add wave  \
+sim:/name_detector_tb/ascii \
+sim:/name_detector_tb/first1 \
+sim:/name_detector_tb/last1 \
+sim:/name_detector_tb/first2 \
+sim:/name_detector_tb/last2
+run
+restart
+run
+quit -sim
+# Compile of name_detector_tb.vhd failed with 2 errors.
+# Compile of name_detector_tb.vhd failed with 1 errors.
+# Compile of name_detector_tb.vhd was successful.
+vsim -gui -novopt work.name_detector_tb
+# vsim -gui -novopt work.name_detector_tb 
+# Loading std.standard
+# Refreshing E:/dsd/Labs/lab42/work.name_detector_tb(test)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.name_detector_tb(test)
+# Loading work.lab42(arch)
+# ** Error: (vsim-3732) E:/dsd/Labs/lab42/name_detector_tb.vhd(95): No default binding for component instance 'uut'.
+# 
+#    The following component port is not on the entity:
+#           b5
+# 
+#         Region: /name_detector_tb/uut
+# Error loading design
+vsim -gui -novopt work.name_detector_tb
+# vsim -gui -novopt work.name_detector_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.name_detector_tb(test)
+# Loading work.lab42(arch)
+# ** Error: (vsim-3732) E:/dsd/Labs/lab42/name_detector_tb.vhd(95): No default binding for component instance 'uut'.
+# 
+#    The following component port is not on the entity:
+#           b5
+# 
+#         Region: /name_detector_tb/uut
+# Error loading design
+# Compile of lab42.vhd was successful.
+# Compile of name_detector_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -gui -novopt work.name_detector_tb
+# vsim -gui -novopt work.name_detector_tb 
+# Loading std.standard
+# Refreshing E:/dsd/Labs/lab42/work.name_detector_tb(test)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.name_detector_tb(test)
+# Refreshing E:/dsd/Labs/lab42/work.lab42(arch)
+# Loading work.lab42(arch)
+add wave  \
+sim:/name_detector_tb/ascii \
+sim:/name_detector_tb/first1 \
+sim:/name_detector_tb/last1 \
+sim:/name_detector_tb/first2 \
+sim:/name_detector_tb/last2
+run
+restart
+run
+restart
+run
+run -all

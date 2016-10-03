@@ -1,0 +1,3 @@
+entity receive
+	port(input : in (15 downto 0)
+		  )

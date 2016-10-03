@@ -1,0 +1,11 @@
+
+State Machine - |lab11|fsm:fsm0|current_state
+Name current_state.pulse current_state.xors current_state.output current_state.shift current_state.load current_state.lockencrypt current_state.lockin current_state.input 
+current_state.input 0 0 0 0 0 0 0 0 
+current_state.lockin 0 0 0 0 0 0 1 1 
+current_state.lockencrypt 0 0 0 0 0 1 0 1 
+current_state.load 0 0 0 0 1 0 0 1 
+current_state.shift 0 0 0 1 0 0 0 1 
+current_state.output 0 0 1 0 0 0 0 1 
+current_state.xors 0 1 0 0 0 0 0 1 
+current_state.pulse 1 0 0 0 0 0 0 1 

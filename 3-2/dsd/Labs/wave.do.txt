@@ -1,0 +1,21 @@
+radix define radix_ssd {
+"7'b1000000" "0" -color "yellow",
+"7'b1111001" "1" -color "yellow",
+"7'b0100100" "2" -color "yellow",
+"7'b0110000" "3" -color "yellow",
+"7'b0011001" "4" -color "yellow",
+"7'b0010010" "5" -color "yellow",
+"7'b0000010" "6" -color "yellow",
+"7'b1111000" "7" -color "yellow",
+"7'b0000000" "8" -color "yellow",
+"7'b0010000" "9" -color "yellow",
+"7'b0001000" "A" -color "yellow",
+"7'b0000011" "B" -color "yellow",
+"7'b1000110" "C" -color "yellow",
+"7'b0100001" "D" -color "yellow",
+"7'b0000110" "E" -color "yellow",
+"7'b0001110" "F" -color "yellow",
+"7'b0111111" "dash" -color "yellow",
+"7'b1111111" "blank" -color "yellow",
+-default hexadecimal
+}

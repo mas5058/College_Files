@@ -1,0 +1,156 @@
+--*****************************************************************************
+--***************************  VHDL Source Code  ******************************
+--*********  Copyright 2010, Rochester Institute of Technology  ***************
+--*****************************************************************************
+--
+--  DESIGNER NAME:  Jeanne Christman
+--
+--       LAB NAME:  VHDL Timers and Counter
+--
+--      FILE NAME:  TOD_tb.vhd
+--
+-------------------------------------------------------------------------------
+--
+--  DESCRIPTION
+--
+--    This test bench will provide input to test the implemention of the 
+--    circuit on the DE2 board that acts as a time-of-day clock. It displays 
+--    the hour (from 0 to 23) on the 7-segment displays HEX7-6, the minute 
+--    (from 0 to 60) on HEX5-4 and the second (from 0 to 60) on HEX3-2.
+--    The contents of the value displayed on the 7-segment displays must be 
+--    manually verfied.
+--
+-------------------------------------------------------------------------------
+--
+--  REVISION HISTORY
+--
+--  _______________________________________________________________________
+-- |  DATE    | USER | Ver |  Description                                  |
+-- |==========+======+=====+================================================
+-- |          |      |     |
+-- | 10/16/13 | JWC  | 1.0 | Created
+-- | 4/3/15   | JWC  | 1.1 | added RorT input for test mode
+-- |          |      |     |
+--
+--*****************************************************************************
+--*****************************************************************************
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY TOD_tb IS
+END TOD_tb;
+
+
+ARCHITECTURE test OF TOD_tb IS
+
+   -- Component Declaration for the Unit Under Test (UUT)
+   -- if you use a package with the component defined then you do not need this
+   COMPONENT lab8
+      PORT (
+         clk       : IN  std_logic;
+         resetn   : IN  std_logic;
+         load   : IN  std_logic;
+         inputs        : IN  std_logic_vector(15 DOWNTO 0);
+	 RoT      : IN std_logic;
+         --
+         h2          : OUT std_logic_vector(6 DOWNTO 0);
+         h1          : OUT std_logic_vector(6 DOWNTO 0);
+         m2          : OUT std_logic_vector(6 DOWNTO 0);
+         m1          : OUT std_logic_vector(6 DOWNTO 0);
+         s2          : OUT std_logic_vector(6 DOWNTO 0);
+         s1          : OUT std_logic_vector(6 DOWNTO 0)
+         );
+   END COMPONENT;
+
+   -- define signals for component ports
+   SIGNAL clk_tb      : std_logic                     := '0';
+   SIGNAL reset_n_tb  : std_logic                     := '0';
+   SIGNAL load_n_tb   : std_logic                     := '0';
+   SIGNAL load_time_tb : std_logic_vector(15 DOWNTO 0) := x"0000";
+   SIGNAL RorT_tb      : std_logic                     := '0'; --put it in the test mode
+   --
+   -- Outputs
+   SIGNAL hex2          : std_logic_vector(6 DOWNTO 0);
+   SIGNAL hex3          : std_logic_vector(6 DOWNTO 0);
+   SIGNAL hex4          : std_logic_vector(6 DOWNTO 0);
+   SIGNAL hex5          : std_logic_vector(6 DOWNTO 0);
+   SIGNAL hex6          : std_logic_vector(6 DOWNTO 0);
+   SIGNAL hex7          : std_logic_vector(6 DOWNTO 0);
+
+   -- signals for test bench control
+   SIGNAL sim_done : boolean := false;
+   SIGNAL PERIOD_c : time    := 20 ns;  -- 50MHz
+
+BEGIN  -- test
+
+   -- component instantiation
+   UUT : lab8
+      PORT MAP (
+         clk           => clk_tb,
+         resetn       => reset_n_tb,
+         load        => load_n_tb,
+         inputs            => load_time_tb,
+	 RoT          => RorT_tb,
+         --
+         h1          => hex2,
+         h2          => hex3,
+         m1          => hex4,
+         m2          => hex5,
+         s1          => hex6,
+         s2          => hex7
+         );
+
+   -- This creates an clock_50 that will shut off at the end of the Simulation
+   -- this makes a clock_50 that you can shut off when you are done.
+   clk_tb <= NOT clk_tb AFTER PERIOD_C/2 WHEN (NOT sim_done) ELSE '0';
+
+
+   ---------------------------------------------------------------------------
+   -- NAME: Stimulus
+   --
+   -- DESCRIPTION:
+   --    This process will apply stimulus to the UUT.
+   ---------------------------------------------------------------------------
+   stimulus : PROCESS
+   BEGIN
+      -- de-assert all inputs except the reset which is asserted
+      reset_n_tb   <= '0';
+      load_n_tb  <= '1';
+      load_time_tb <= x"0000";
+      WAIT FOR 5 ns;
+
+      -- now lets sync the stimulus to the clock_50
+      -- move stimulus 1ns after clock edge
+      WAIT UNTIL clk_tb = '1';
+      WAIT FOR 1 ns;
+
+      -- de-assert reset and let run for 4 seconds
+      reset_n_tb <= '1';
+      WAIT FOR 180004*PERIOD_C;  -- adjust this time to lengthen/shorten sim
+
+      -- load a new time
+      load_n_tb <= '0';
+      load_time_tb <= x"1958";
+      WAIT FOR 5*PERIOD_C;
+      
+      load_n_tb <= '1';
+      WAIT FOR 81601 * PERIOD_C;  -- adjust this time to lengthen/shorten sim
+
+
+      -- shutting down simulation
+      sim_done <= true;
+      WAIT FOR PERIOD_c*1;
+
+      -----------------------------------------------------------------------
+      -- This Last WAIT statement needs to be here to prevent the PROCESS
+      -- sequence from re starting.
+      -----------------------------------------------------------------------
+      WAIT;
+
+   END PROCESS stimulus;
+
+
+
+END test;

@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity hw8 is 
+	port (start, full : in std_logic;
+			state : out std_logic);
+	
+architecture arch of hw8 is
+	signal time : std_logic_vector(3 downto 0);
+	begin
+	process

@@ -1,0 +1,5 @@
+.encoding = "windows-1252"
+cloneOf0 = "C:\Virtual Machines\VL_WIN7_32\Windows 7 x32 VL.vmx"
+numCloneOf = "1"
+sentinel0 = "Windows 7 x32 VL-cl1.vmdk"
+numSentinels = "1"

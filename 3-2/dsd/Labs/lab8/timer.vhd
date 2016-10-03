@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity timer is
+	port(clk,rot, resetn  : in std_logic;
+		 flag: out std_logic);
+	end timer;
+
+architecture arch of timer is
+	signal max_count : std_logic_vector(27 downto 0);
+	signal int_count :std_logic_vector(27 downto 0);
+	--signal flag : std_logic;
+	--flag <= flag;
+	begin
+	test: process(rot)
+	--sets the delay of the count
+	begin
+		if (rot = '1') then
+			max_count <= X"2FAF07F";
+		else
+			max_count <= X"0000004";
+		end if;
+	end process;
+	delay:process(clk)
+	begin
+	if (rising_edge(clk)) then
+		if (resetn = '0') then
+			int_count <= (others => '0');
+		else
+			if(int_count = max_count) then
+				int_count <= (others => '0');
+			else
+				int_count <= (int_count + '1');
+			end if;
+		end if;
+	end if;
+	end process;
+	
+	flaging:process (clk)
+		begin
+			if(rising_edge(clk)) then
+				if (resetn = '0') then
+					flag <= '0';
+				else
+					if (int_count = max_count) then
+						flag <= '1';
+					else
+						flag <= '0';
+					end if;
+				end if;
+			end if;
+		end process;
+		end arch;

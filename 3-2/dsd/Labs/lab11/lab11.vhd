@@ -1,0 +1,120 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity lab11 is
+	port(	  key   : in std_logic_vector(2 downto 0); 
+		  clk   : in std_logic;
+		 -- resetn : in std_logic;
+		  encrpt  : in std_logic_vector(15 downto 0);
+		  h0,h1,h2 ,h3 : out std_logic_vector(6 downto 0);
+		  gpio   : out std_logic);
+	end lab11;
+
+architecture arch of lab11 is
+	signal dmux1,dmux2,xorsig0,xorsig1, dsig : std_logic_vector(15 downto 0);
+	signal muxseal : std_logic_vector(1 downto 0);
+	signal shiften, den1, den2, xoren, timen, shiftld, shiftsh,gsig : std_logic;
+	component mux is
+	port(sel : std_logic_vector (1 downto 0);
+		  input : in std_logic;
+		  gpio : out std_logic);
+end component;
+	component shiftregister is
+	port(en, resetn, load, sh, clk: in std_logic;
+			d : in std_logic_vector(15 downto 0);
+		  output : out std_logic);
+	end component;
+	
+	component bcd is 
+	port(inputs  : in std_logic_vector (3 downto 0);
+		 hex : out std_logic_vector (6 downto 0)
+		 );
+	end component;
+	
+	component timer is
+	port(clk, resetn : in std_logic;
+		 delay : in std_logic_vector(5 downto 0);
+		 flag: out std_logic);
+	end component;
+	
+	component xorgate is
+	port(i1 , i2 : in std_logic_vector(15 downto 0);
+		  clk, enable : in std_logic;
+		  output : out std_logic_vector(15 downto 0));
+	end component;
+	
+	component dflip is
+		port(d : in std_logic_vector(15 downto 0);
+			enable : in std_logic;
+			q : out std_logic_vector(15 downto 0));
+	end component;
+	component fsm is
+	port (clk, flag, resetn, key1, key2 :in std_logic;
+			den1, den2, xoren, timen, shiftld, shiftsh: out std_logic;
+			muxseal : out std_logic_vector(1 downto 0)); 
+	end component; 
+	
+	begin
+	muxseal0: mux port map(
+	   sel => muxseal,
+		  input => gsig,
+		  gpio => gpio);
+	shifty:shiftregister port map(
+		en => shiften,
+		load => shiftld,
+		sh => shiftsh,
+		clk => clk,
+		resetn => key(0),
+		d => dsig,
+		output => gsig);
+	fsm0:fsm port map(
+		resetn => key(0),
+		clk => clk,
+		flag => shiften,
+		key1 => key(1),
+		key2 => key(2),
+		den1 => den1,
+		den2 => den2,
+		xoren => xoren,
+		timen => timen,
+		shiftld => shiftld,
+		muxseal => muxseal,
+		shiftsh => shiftsh);
+		
+	timer0: timer port map(
+		clk => clk,
+		resetn => key(0),
+		delay => "110010",
+		flag => shiften);
+		
+	xorgate0 :xorgate port map(
+		clk => clk,
+		i1 => xorsig0,
+		i2 => xorsig1,
+		enable => xoren,
+		output => dsig);
+		
+	dflip0 : dflip port map(
+		d => dmux1,
+		enable => den1,
+		q => xorsig0);
+		
+	dflip1 : dflip port map(
+		d => dmux2,
+		enable => den2,
+		q => xorsig1);
+	bcd2ssd0 : bcd port map(
+		inputs => dmux1(15 downto 12),
+		hex => h0);
+	bcd2ss1 : bcd port map(
+		inputs => dmux1(11 downto 8),
+		hex => h1);
+	bcd2ss2 : bcd port map(
+		inputs => dmux1(7 downto 4),
+		hex => h2);
+	bcd2ss3 : bcd port map(
+		inputs => dmux1(3 downto 0),
+		hex => h3);
+	dmux1 <= encrpt;
+	dmux2 <= encrpt;
+	end arch;
