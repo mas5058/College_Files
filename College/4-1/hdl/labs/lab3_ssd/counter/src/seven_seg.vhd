@@ -53,7 +53,7 @@ entity seven_seg is
 			std_logic_vector(6 downto 0):= "0001110";
 	begin
 	
-	proc2:process (inputs) 
+	proc2:process (clk, reset,inputs) 
 		begin
 		if (reset = '1') then
 			hex0 <= eight;

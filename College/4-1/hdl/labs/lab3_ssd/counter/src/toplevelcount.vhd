@@ -7,13 +7,14 @@ entity toplevelcount is
     port(
     clk                   : in std_logic;
     reset                 : in std_logic;
-    enable                : in std_logic;
-    seven_seg_out         : out std_logic_vector (6 downto 0);
-    sum                   : out std_logic_vector (3 downto 0);
-    );
-end toplevcount;
+    --enable                : in std_logic;
+    seven_seg_out         : out std_logic_vector (6 downto 0)
+);
+end entity toplevelcount;
 
-architecture arch of toplevcount is
+architecture arch of toplevelcount is
+signal sum_sig, sum : std_logic_vector(3 downto 0) := (others => '0');
+signal enable : std_logic;
 
 component generic_adder_beh is
   generic (
@@ -60,23 +61,27 @@ component seven_seg is
     port map(
     clk => clk,
     reset => reset,
-    output => sum_sig
+    output => enable
     );
   
   uut: seven_seg
     port map(
-        inputs => sum_sig
+        inputs => sum_sig, 
         clk => clk,
         reset => reset,
         hex0 => seven_seg_out
-        )
-	sumreg process
-	signal sumsig std_logic_vector(bits-1 downto 0);
+        );
+		
+	sumreg : process (reset,enable,clk)
 	begin
-	if reset = 1 then
+	if reset = '1' then
 		sum_sig <= (others => '0');
-	elsif enable = 1 || rising_edge(clk) then
+	elsif ((enable = '1') and (rising_edge(clk))) then
 		sum_sig <= sum;
 	end if;
+end process;
+
+
+end arch;
 	
 		

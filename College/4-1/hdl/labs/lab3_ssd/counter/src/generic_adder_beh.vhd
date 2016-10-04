@@ -28,4 +28,12 @@ begin
   sum_temp  <= std_logic_vector(unsigned('0' & a) + unsigned('0' & b) + unsigned(cin_guard & cin));
   sum       <= sum_temp(bits-1 downto 0);
   cout      <= sum_temp(bits); -- Carry is the most significant bit
+  --process below breaks code
+  process(sum_temp)
+  begin
+  if (sum_temp = "1010") then
+	sum <= (others=> '0');
+	end if;
+end process;
+  
 end beh;
