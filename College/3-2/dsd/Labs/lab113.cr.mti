@@ -1,0 +1,85 @@
+E:/dsd/Labs/lab11/shiftregister.vhd {1 {vcom -work work -2002 -explicit {E:\dsd\Labs\lab11\shiftregister.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity shiftregister
+-- Compiling architecture arch of shiftregister
+
+} {} {}} E:/dsd/Labs/lab11/dflip.vhd {1 {vcom -work work -2002 -explicit E:/dsd/Labs/lab11/dflip.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dflip
+-- Compiling architecture arch of dflip
+
+} {} {}} E:/dsd/Labs/lab11/lab11.vhd {1 {vcom -work work -2002 -explicit {E:\dsd\Labs\lab11\lab11.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lab11
+-- Compiling architecture arch of lab11
+
+} {} {}} E:/dsd/Labs/lab11/bcd.vhd {1 {vcom -work work -2002 -explicit E:/dsd/Labs/lab11/bcd.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity bcd
+-- Compiling architecture arch of bcd
+
+} {} {}} E:/dsd/Labs/lab11/fsm.vhd {1 {vcom -work work -2002 -explicit {E:\dsd\Labs\lab11\fsm.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity fsm
+-- Compiling architecture behave of fsm
+
+} {} {}} E:/dsd/Labs/lab11/mux.vhd {1 {vcom -work work -2002 -explicit {E:\dsd\Labs\lab11\mux.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux
+-- Compiling architecture arch of mux
+
+} {} {}} E:/dsd/Labs/lab11/receiver_tb.vhd {1 {vcom -work work -2002 -explicit E:/dsd/Labs/lab11/receiver_tb.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity receiver_tb
+-- Compiling architecture test of receiver_tb
+
+} {} {}} E:/dsd/Labs/lab11/transmitter_tb.vhd {1 {vcom -work work -2002 -explicit {E:\dsd\Labs\lab11\transmitter_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity transmitter_tb
+-- Compiling architecture test of transmitter_tb
+
+} {} {}} E:/dsd/Labs/lab11/xorgate.vhd {1 {vcom -work work -2002 -explicit E:/dsd/Labs/lab11/xorgate.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity xorgate
+-- Compiling architecture arch of xorgate
+
+} {} {}}

@@ -1,0 +1,167 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L6 is archf2~0 at LCCOMB_X15_Y1_N24
+A1L6 = (A1L25 & (((!A1L29)))) # (!A1L25 & (A1L31 & ((!A1L29) # (!A1L27))));
+
+
+--A1L3 is archf1~0 at LCCOMB_X15_Y1_N18
+A1L3 = (A1L24 & (!A1L21 & A1L6));
+
+
+--A1L32 is Mux0~0 at LCCOMB_X15_Y1_N12
+A1L32 = (A1L25 & (((!A1L29)))) # (!A1L25 & (A1L31 & ((!A1L29) # (!A1L27))));
+
+
+--A1L33 is Mux0~1 at LCCOMB_X15_Y1_N22
+A1L33 = (A1L32 & (A1L24 & !A1L21));
+
+
+--A1L34 is Mux1~0 at LCCOMB_X15_Y1_N16
+A1L34 = (!A1L27 & (!A1L25 & A1L24));
+
+
+--A1L14 is archl2~0 at LCCOMB_X15_Y1_N10
+A1L14 = (A1L34 & ((A1L29 & (A1L21)) # (!A1L29 & (!A1L21 & A1L31))));
+
+
+--A1L15 is archl2~1 at LCCOMB_X15_Y1_N28
+A1L15 = (A1L25 & (A1L27 & (A1L29 $ (!A1L31))));
+
+
+--A1L11 is archl1~0 at LCCOMB_X15_Y1_N6
+A1L11 = (A1L14) # ((A1L24 & A1L15));
+
+
+--A1L16 is archl2~2 at LCCOMB_X15_Y1_N0
+A1L16 = (A1L14) # ((A1L15 & (!A1L21 & A1L24)));
+
+
+--A1L35 is Mux1~1 at LCCOMB_X15_Y1_N2
+A1L35 = (A1L29 & (A1L34 & A1L21));
+
+
+--A1L36 is Mux1~2 at LCCOMB_X15_Y1_N20
+A1L36 = (A1L25 & (A1L27 & (A1L29 $ (!A1L31)))) # (!A1L25 & (!A1L27 & (!A1L29 & A1L31)));
+
+
+--A1L37 is Mux1~3 at LCCOMB_X15_Y1_N14
+A1L37 = (A1L35) # ((A1L24 & (A1L36 & !A1L21)));
+
+
+--A1L4 is archf1~output at IOOBUF_X12_Y31_N2
+A1L4 = OUTPUT_BUFFER.O(.I(A1L3), , , , , , , , , , , , , , , , , );
+
+
+--archf1 is archf1 at PIN_A7
+archf1 = OUTPUT();
+
+
+--A1L7 is archf2~output at IOOBUF_X12_Y31_N9
+A1L7 = OUTPUT_BUFFER.O(.I(A1L3), , , , , , , , , , , , , , , , , );
+
+
+--archf2 is archf2 at PIN_A8
+archf2 = OUTPUT();
+
+
+--A1L9 is archf3~output at IOOBUF_X8_Y0_N9
+A1L9 = OUTPUT_BUFFER.O(.I(A1L33), , , , , , , , , , , , , , , , , );
+
+
+--archf3 is archf3 at PIN_L4
+archf3 = OUTPUT();
+
+
+--A1L12 is archl1~output at IOOBUF_X10_Y0_N9
+A1L12 = OUTPUT_BUFFER.O(.I(A1L11), , , , , , , , , , , , , , , , , );
+
+
+--archl1 is archl1 at PIN_N4
+archl1 = OUTPUT();
+
+
+--A1L17 is archl2~output at IOOBUF_X8_Y0_N2
+A1L17 = OUTPUT_BUFFER.O(.I(A1L16), , , , , , , , , , , , , , , , , );
+
+
+--archl2 is archl2 at PIN_M4
+archl2 = OUTPUT();
+
+
+--A1L19 is archl3~output at IOOBUF_X14_Y0_N9
+A1L19 = OUTPUT_BUFFER.O(.I(A1L37), , , , , , , , , , , , , , , , , );
+
+
+--archl3 is archl3 at PIN_L5
+archl3 = OUTPUT();
+
+
+--A1L31 is e~input at IOIBUF_X22_Y0_N8
+A1L31 = INPUT_BUFFER(.I(e), );
+
+
+--e is e at PIN_K8
+e = INPUT();
+
+
+--A1L25 is b~input at IOIBUF_X12_Y0_N8
+A1L25 = INPUT_BUFFER(.I(b), );
+
+
+--b is b at PIN_M6
+b = INPUT();
+
+
+--A1L27 is c~input at IOIBUF_X12_Y0_N1
+A1L27 = INPUT_BUFFER(.I(c), );
+
+
+--c is c at PIN_N6
+c = INPUT();
+
+
+--A1L29 is d~input at IOIBUF_X22_Y0_N1
+A1L29 = INPUT_BUFFER(.I(d), );
+
+
+--d is d at PIN_K9
+d = INPUT();
+
+
+--A1L24 is b6~input at IOIBUF_X14_Y0_N1
+A1L24 = INPUT_BUFFER(.I(b6), );
+
+
+--b6 is b6 at PIN_L7
+b6 = INPUT();
+
+
+--A1L21 is a~input at IOIBUF_X20_Y0_N1
+A1L21 = INPUT_BUFFER(.I(a), );
+
+
+--a is a at PIN_N9
+a = INPUT();
+
+
+
+
+
+
+
+
+
+
+
+

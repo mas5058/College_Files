@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity lab3 is 
+	port(a,b,c,d,e,b6    : IN std_logic;
+			f, l           : out std_logic
+			);
+end lab3;
+
+architecture behv is  begin
+	F <= (not a and((not d and e) or (b and not d) or (not b and not c and e));
+	L <= (not a and (not b and not c and not d and e) or (b and c)and(not d and not e or d and e) or (a and d and not b and not c));
+	end architecture behv;
+
+
+	

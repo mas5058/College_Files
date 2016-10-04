@@ -1,0 +1,86 @@
+m255
+K4
+z0
+13
+cModel Technology
+dC:/Program Files/MentorGraphics/ModelSim/examples
+Elab42
+Z0 w1455812336
+Z1 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Z3 dE:/dsd/Labs/lab42
+Z4 8E:/dsd/Labs/lab42/lab42.vhd
+Z5 FE:/dsd/Labs/lab42/lab42.vhd
+l0
+L4
+VHX8?N?S;>mTf`LkDUG2z23
+Z6 OL;C;10.2c;57
+32
+Z7 !s110 1455812344
+Z8 !s108 1455812342.156000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/dsd/Labs/lab42/lab42.vhd|
+Z10 !s107 E:/dsd/Labs/lab42/lab42.vhd|
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1
+!s100 ?odM7S5`NWcWE4ZM<M@<L1
+!i10b 1
+!i111 0
+Aarch
+R1
+R2
+DEx4 work 5 lab42 0 22 HX8?N?S;>mTf`LkDUG2z23
+32
+R7
+l12
+L10
+VBoZac=[fYLRR4WLbWie381
+R6
+R8
+R9
+R10
+R11
+R12
+!s100 UTon4B?NVGJX[9RPeOjoW3
+!i10b 1
+!i111 0
+Ename_detector_tb
+Z13 w1455812054
+Z14 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+R1
+R2
+R3
+Z15 8E:/dsd/Labs/lab42/name_detector_tb.vhd
+Z16 FE:/dsd/Labs/lab42/name_detector_tb.vhd
+l0
+L42
+VP^0C]99:a]o7gabfJdB:i3
+R6
+32
+R7
+Z17 !s108 1455812342.679000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/dsd/Labs/lab42/name_detector_tb.vhd|
+Z19 !s107 E:/dsd/Labs/lab42/name_detector_tb.vhd|
+R11
+R12
+!s100 7;GKiKenH>gZf_QEN>j<Y3
+!i10b 1
+!i111 0
+Atest
+R14
+R1
+R2
+DEx4 work 16 name_detector_tb 0 22 P^0C]99:a]o7gabfJdB:i3
+32
+R7
+l76
+L45
+VRM<]T1N2ScA79`Rhb1jz20
+R6
+R17
+R18
+R19
+R11
+R12
+!s100 ]3E?7gS`^<_fQiD[`iJE42
+!i10b 1
+!i111 0

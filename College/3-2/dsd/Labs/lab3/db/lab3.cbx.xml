@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|lpm_mux:Mux0" CBX_FILE_NAME="mux_ooc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|lpm_mux:Mux1" CBX_FILE_NAME="mux_ooc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

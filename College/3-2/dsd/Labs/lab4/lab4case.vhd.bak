@@ -1,0 +1,14 @@
+libary ieee;
+use ieee.std_logic_1164.all;
+
+entity lab4case is 
+	port(a,b,c,d,e,b6  : IN std_logic;
+			first, last  : out std_logic
+			);
+	end lab4;
+	
+architecture arch of lab4 is 
+begin
+inputs <= b6 & a & b & c & d & e & b6;
+
+			
