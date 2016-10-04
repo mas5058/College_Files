@@ -1,0 +1,39 @@
+# Title: Search.py 04 Solution - search operations
+# CPET-321 Computational Problem Solving II Fall 2016
+# Platform: Python 2.7 PyCharm
+
+
+import timeit
+
+
+def brute_force(arr, size, elem_2_find):
+    for i in range(0, size):
+        if arr[i] == elem_2_find:
+            print "found"
+            return
+
+    print "Not found"
+
+# Implement binary search approach and calculate the time
+
+
+def main():
+
+    array_size = input("Enter array size\n")
+    arr = []
+
+    while True:
+        elem_2_find = input("Enter element < size to find\n")
+        if elem_2_find < array_size:
+            break
+
+    for i in range(0, array_size):
+        arr.append(i)
+
+    start_time_plus = timeit.default_timer()
+    brute_force(arr, len(arr), elem_2_find)
+    elapsed_plus = (timeit.default_timer() - start_time_plus)*1000
+    print "Time to search by using brute force approach", elapsed_plus
+
+if __name__ == '__main__':
+    main()

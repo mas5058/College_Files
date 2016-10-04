@@ -1,0 +1,14 @@
+# ** Error: (vish-42) Unsupported ModelSim library format for "F:/College/four 1/hdl/labs/lab4_adder_subtractor/adder_subtracter/sim/script/work". (Format: 4)
+# do sim.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-42) Unsupported ModelSim library format for "F:/College/four 1/hdl/labs/lab4_adder_subtractor/adder_subtracter/sim/script/work". (Format: 4)
+# 
+# ** Error: VHDL Compiler exiting
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 2
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work ../../src/top.vhd"
+# ** Error: (vish-42) Unsupported ModelSim library format for "F:/College/four 1/hdl/labs/lab4_adder_subtractor/adder_subtracter/sim/script/work". (Format: 4)

@@ -1,0 +1,11 @@
+clc; close all; clear all;
+Vd = 0:0.02:0.8;
+Is = 1e-12;
+n = 1;
+Vt = 26e-3;
+Id = Is*(exp(Vd/(n*Vt))-1);
+figure(1);
+plot(Vd, Id);
+grid;
+xlabel('Vd');
+ylabel('Id');

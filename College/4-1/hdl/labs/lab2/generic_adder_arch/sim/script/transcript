@@ -1,0 +1,1302 @@
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:09:00 on Oct 04,2016
+# vcom -reportprogress 300 -93 -work work ../../src/full_adder_single_bit_arch/src/alu_and.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_and
+# -- Compiling architecture beh of alu_and
+# End time: 10:09:00 on Oct 04,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:09:01 on Oct 04,2016
+# vcom -reportprogress 300 -93 -work work ../../src/full_adder_single_bit_arch/src/alu_or.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_or
+# -- Compiling architecture beh of alu_or
+# End time: 10:09:01 on Oct 04,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:09:01 on Oct 04,2016
+# vcom -reportprogress 300 -93 -work work ../../src/full_adder_single_bit_arch/src/alu_xor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_xor
+# -- Compiling architecture beh of alu_xor
+# End time: 10:09:01 on Oct 04,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:09:01 on Oct 04,2016
+# vcom -reportprogress 300 -93 -work work ../../src/full_adder_single_bit_arch/src/full_adder_single_bit_arch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder_single_bit_arch
+# -- Compiling architecture arch of full_adder_single_bit_arch
+# End time: 10:09:02 on Oct 04,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:09:02 on Oct 04,2016
+# vcom -reportprogress 300 -93 -work work ../../src/generic_adder_arch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_adder_arch
+# -- Compiling architecture arch of generic_adder_arch
+# End time: 10:09:02 on Oct 04,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 10:09:02 on Oct 04,2016
+# vcom -reportprogress 300 -93 -work work ../src/generic_adder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity generic_adder_tb
+# -- Compiling architecture arch of generic_adder_tb
+# End time: 10:09:03 on Oct 04,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -novopt generic_adder_tb 
+# Start time: 10:09:04 on Oct 04,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.generic_adder_tb(arch)
+# Loading work.generic_adder_arch(arch)
+# Loading work.full_adder_single_bit_arch(arch)
+# Loading work.alu_xor(beh)
+# Loading work.alu_and(beh)
+# Loading work.alu_or(beh)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: mas5058  Hostname: ECTET-1360-05  ProcessID: 1168
+# 
+#           Attempting to use alternate WLF file "./wlfte7w8q4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfte7w8q4
+# 
+# ** Error: (vish-4014) No objects found matching '/generic_adder_tb/uut/sum_temp'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Error: (vish-4014) No objects found matching '/generic_adder_tb/uut/cin_guard'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /generic_adder_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /generic_adder_tb
+# ** Error: a:0 b:0 sum:0
+#    Time: 0 ps  Iteration: 0  Instance: /generic_adder_tb
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Region: /generic_adder_tb/sequential_stimuli
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /generic_adder_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /generic_adder_tb
+# ** Error: a:0 b:0 sum:0
+#    Time: 0 ps  Iteration: 2  Instance: /generic_adder_tb
+# ** Error: a:1 b:1 sum:1
+#    Time: 10 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:2 sum:0
+#    Time: 20 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:4 sum:2
+#    Time: 40 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:4 sum:14
+#    Time: 40 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:6 sum:4
+#    Time: 60 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:6 sum:0
+#    Time: 60 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:8 sum:6
+#    Time: 80 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:10 sum:8
+#    Time: 100 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:12 sum:10
+#    Time: 120 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:12 sum:6
+#    Time: 120 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:14 sum:12
+#    Time: 140 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:14 sum:8
+#    Time: 140 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:0 sum:14
+#    Time: 160 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:1 sum:0
+#    Time: 170 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:1 sum:6
+#    Time: 170 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:2 b:1 sum:0
+#    Time: 170 ns  Iteration: 6  Instance: /generic_adder_tb
+# ** Error: a:2 b:2 sum:7
+#    Time: 180 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:3 sum:4
+#    Time: 190 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:4 sum:1
+#    Time: 200 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:4 sum:11
+#    Time: 200 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:4 sum:15
+#    Time: 200 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:2 b:5 sum:6
+#    Time: 210 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:5 sum:4
+#    Time: 210 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:5 sum:0
+#    Time: 210 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:2 b:6 sum:11
+#    Time: 220 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:7 sum:8
+#    Time: 230 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:8 sum:5
+#    Time: 240 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:8 sum:15
+#    Time: 240 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:9 sum:10
+#    Time: 250 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:9 sum:8
+#    Time: 250 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:10 sum:15
+#    Time: 260 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:11 sum:12
+#    Time: 270 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:12 sum:9
+#    Time: 280 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:12 sum:3
+#    Time: 280 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:12 sum:7
+#    Time: 280 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:2 b:13 sum:14
+#    Time: 290 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:13 sum:12
+#    Time: 290 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:13 sum:8
+#    Time: 290 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:2 b:14 sum:3
+#    Time: 300 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:15 sum:0
+#    Time: 310 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:0 sum:13
+#    Time: 320 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:0 sum:7
+#    Time: 320 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:3 b:1 sum:1
+#    Time: 330 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:3 b:4 sum:0
+#    Time: 360 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:8 sum:4
+#    Time: 400 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:12 sum:8
+#    Time: 440 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:0 sum:12
+#    Time: 480 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:1 sum:2
+#    Time: 490 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:1 sum:12
+#    Time: 490 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:4 b:1 sum:14
+#    Time: 490 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:2 sum:5
+#    Time: 500 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:2 sum:3
+#    Time: 500 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:2 sum:11
+#    Time: 500 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:4 b:2 sum:15
+#    Time: 500 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:4 b:3 sum:6
+#    Time: 510 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:3 sum:4
+#    Time: 510 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:3 sum:0
+#    Time: 510 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:4 b:4 sum:15
+#    Time: 520 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:5 sum:8
+#    Time: 530 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:6 sum:9
+#    Time: 540 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:6 sum:15
+#    Time: 540 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:7 sum:10
+#    Time: 550 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:7 sum:8
+#    Time: 550 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:8 sum:3
+#    Time: 560 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:8 sum:5
+#    Time: 560 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:9 sum:12
+#    Time: 570 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:10 sum:13
+#    Time: 580 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:10 sum:11
+#    Time: 580 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:10 sum:3
+#    Time: 580 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:4 b:10 sum:7
+#    Time: 580 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:4 b:11 sum:14
+#    Time: 590 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:11 sum:12
+#    Time: 590 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:11 sum:8
+#    Time: 590 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:4 b:12 sum:7
+#    Time: 600 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:13 sum:0
+#    Time: 610 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:14 sum:1
+#    Time: 620 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:14 sum:7
+#    Time: 620 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:15 sum:2
+#    Time: 630 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:15 sum:0
+#    Time: 630 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:0 sum:11
+#    Time: 640 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:0 sum:13
+#    Time: 640 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:2 sum:4
+#    Time: 660 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:2 sum:0
+#    Time: 660 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:4 sum:14
+#    Time: 680 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:6 sum:8
+#    Time: 700 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:8 sum:2
+#    Time: 720 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:8 sum:6
+#    Time: 720 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:10 sum:12
+#    Time: 740 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:10 sum:8
+#    Time: 740 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:12 sum:6
+#    Time: 760 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:14 sum:0
+#    Time: 780 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:0 sum:10
+#    Time: 800 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:0 sum:14
+#    Time: 800 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:1 sum:4
+#    Time: 810 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:1 sum:2
+#    Time: 810 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:6 b:1 sum:0
+#    Time: 810 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:1 sum:12
+#    Time: 810 ns  Iteration: 6  Instance: /generic_adder_tb
+# ** Error: a:6 b:1 sum:0
+#    Time: 810 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:6 b:2 sum:11
+#    Time: 820 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:3 sum:8
+#    Time: 830 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:4 sum:13
+#    Time: 840 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:4 sum:15
+#    Time: 840 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:5 sum:10
+#    Time: 850 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:5 sum:8
+#    Time: 850 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:6 sum:15
+#    Time: 860 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:7 sum:12
+#    Time: 870 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:8 sum:1
+#    Time: 880 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:8 sum:3
+#    Time: 880 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:8 sum:7
+#    Time: 880 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:6 b:9 sum:14
+#    Time: 890 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:9 sum:12
+#    Time: 890 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:9 sum:8
+#    Time: 890 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:6 b:10 sum:3
+#    Time: 900 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:11 sum:0
+#    Time: 910 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:12 sum:5
+#    Time: 920 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:12 sum:7
+#    Time: 920 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:13 sum:2
+#    Time: 930 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:13 sum:0
+#    Time: 930 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:14 sum:7
+#    Time: 940 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:15 sum:4
+#    Time: 950 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:0 sum:9
+#    Time: 960 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:0 sum:11
+#    Time: 960 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:0 sum:15
+#    Time: 960 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:7 b:1 sum:5
+#    Time: 970 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:7 b:1 sum:1
+#    Time: 970 ns  Iteration: 6  Instance: /generic_adder_tb
+# ** Error: a:8 b:1 sum:6
+#    Time: 1130 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:1 sum:8
+#    Time: 1130 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:8 b:2 sum:9
+#    Time: 1140 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:2 sum:15
+#    Time: 1140 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:3 sum:10
+#    Time: 1150 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:3 sum:8
+#    Time: 1150 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:4 sum:11
+#    Time: 1160 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:4 sum:5
+#    Time: 1160 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:5 sum:12
+#    Time: 1170 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:6 sum:13
+#    Time: 1180 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:6 sum:11
+#    Time: 1180 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:6 sum:7
+#    Time: 1180 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:8 b:7 sum:14
+#    Time: 1190 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:7 sum:12
+#    Time: 1190 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:7 sum:8
+#    Time: 1190 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:8 b:8 sum:15
+#    Time: 1200 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:9 sum:0
+#    Time: 1210 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:10 sum:1
+#    Time: 1220 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:10 sum:7
+#    Time: 1220 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:11 sum:2
+#    Time: 1230 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:11 sum:0
+#    Time: 1230 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:12 sum:3
+#    Time: 1240 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:12 sum:13
+#    Time: 1240 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:13 sum:4
+#    Time: 1250 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:14 sum:5
+#    Time: 1260 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:14 sum:3
+#    Time: 1260 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:14 sum:15
+#    Time: 1260 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:8 b:15 sum:6
+#    Time: 1270 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:8 b:15 sum:4
+#    Time: 1270 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:8 b:15 sum:0
+#    Time: 1270 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:8 b:0 sum:7
+#    Time: 1280 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:2 sum:8
+#    Time: 1300 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:4 sum:10
+#    Time: 1320 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:4 sum:6
+#    Time: 1320 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:6 sum:12
+#    Time: 1340 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:6 sum:8
+#    Time: 1340 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:8 sum:14
+#    Time: 1360 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:10 sum:0
+#    Time: 1380 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:12 sum:2
+#    Time: 1400 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:12 sum:14
+#    Time: 1400 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:14 sum:4
+#    Time: 1420 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:14 sum:0
+#    Time: 1420 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:0 sum:6
+#    Time: 1440 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:1 sum:8
+#    Time: 1450 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:1 sum:14
+#    Time: 1450 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:10 b:1 sum:8
+#    Time: 1450 ns  Iteration: 6  Instance: /generic_adder_tb
+# ** Error: a:10 b:2 sum:15
+#    Time: 1460 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:3 sum:12
+#    Time: 1470 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:4 sum:9
+#    Time: 1480 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:4 sum:3
+#    Time: 1480 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:4 sum:7
+#    Time: 1480 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:10 b:5 sum:14
+#    Time: 1490 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:5 sum:12
+#    Time: 1490 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:5 sum:8
+#    Time: 1490 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:10 b:6 sum:3
+#    Time: 1500 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:7 sum:0
+#    Time: 1510 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:8 sum:13
+#    Time: 1520 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:8 sum:7
+#    Time: 1520 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:9 sum:2
+#    Time: 1530 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:9 sum:0
+#    Time: 1530 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:10 sum:7
+#    Time: 1540 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:11 sum:4
+#    Time: 1550 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:12 sum:1
+#    Time: 1560 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:12 sum:11
+#    Time: 1560 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:12 sum:15
+#    Time: 1560 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:10 b:13 sum:6
+#    Time: 1570 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:13 sum:4
+#    Time: 1570 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:13 sum:0
+#    Time: 1570 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:10 b:14 sum:11
+#    Time: 1580 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:15 sum:8
+#    Time: 1590 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:0 sum:5
+#    Time: 1600 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:0 sum:15
+#    Time: 1600 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:11 b:1 sum:9
+#    Time: 1610 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:11 b:4 sum:8
+#    Time: 1640 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:8 sum:12
+#    Time: 1680 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:12 sum:0
+#    Time: 1720 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:0 sum:4
+#    Time: 1760 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:1 sum:10
+#    Time: 1770 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:1 sum:4
+#    Time: 1770 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:12 b:1 sum:6
+#    Time: 1770 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:2 sum:13
+#    Time: 1780 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:2 sum:11
+#    Time: 1780 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:2 sum:3
+#    Time: 1780 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:12 b:2 sum:7
+#    Time: 1780 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:12 b:3 sum:14
+#    Time: 1790 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:3 sum:12
+#    Time: 1790 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:3 sum:8
+#    Time: 1790 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:12 b:4 sum:7
+#    Time: 1800 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:5 sum:0
+#    Time: 1810 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:6 sum:1
+#    Time: 1820 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:6 sum:7
+#    Time: 1820 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:7 sum:2
+#    Time: 1830 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:7 sum:0
+#    Time: 1830 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:8 sum:11
+#    Time: 1840 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:8 sum:13
+#    Time: 1840 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:9 sum:4
+#    Time: 1850 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:10 sum:5
+#    Time: 1860 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:10 sum:3
+#    Time: 1860 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:10 sum:11
+#    Time: 1860 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:12 b:10 sum:15
+#    Time: 1860 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:12 b:11 sum:6
+#    Time: 1870 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:11 sum:4
+#    Time: 1870 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:11 sum:0
+#    Time: 1870 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:12 b:12 sum:15
+#    Time: 1880 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:13 sum:8
+#    Time: 1890 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:14 sum:9
+#    Time: 1900 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:14 sum:15
+#    Time: 1900 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:15 sum:10
+#    Time: 1910 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:15 sum:8
+#    Time: 1910 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:0 sum:3
+#    Time: 1920 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:0 sum:5
+#    Time: 1920 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:2 sum:12
+#    Time: 1940 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:2 sum:8
+#    Time: 1940 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:4 sum:6
+#    Time: 1960 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:6 sum:0
+#    Time: 1980 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:8 sum:10
+#    Time: 2 us  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:8 sum:14
+#    Time: 2 us  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:10 sum:4
+#    Time: 2020 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:10 sum:0
+#    Time: 2020 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:12 sum:14
+#    Time: 2040 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:14 sum:8
+#    Time: 2060 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:0 sum:2
+#    Time: 2080 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:0 sum:6
+#    Time: 2080 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:1 sum:12
+#    Time: 2090 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:1 sum:10
+#    Time: 2090 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:14 b:1 sum:8
+#    Time: 2090 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:1 sum:4
+#    Time: 2090 ns  Iteration: 6  Instance: /generic_adder_tb
+# ** Error: a:14 b:1 sum:8
+#    Time: 2090 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:14 b:2 sum:3
+#    Time: 2100 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:3 sum:0
+#    Time: 2110 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:4 sum:5
+#    Time: 2120 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:4 sum:7
+#    Time: 2120 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:5 sum:2
+#    Time: 2130 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:5 sum:0
+#    Time: 2130 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:6 sum:7
+#    Time: 2140 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:7 sum:4
+#    Time: 2150 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:8 sum:9
+#    Time: 2160 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:8 sum:11
+#    Time: 2160 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:8 sum:15
+#    Time: 2160 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:14 b:9 sum:6
+#    Time: 2170 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:9 sum:4
+#    Time: 2170 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:9 sum:0
+#    Time: 2170 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:14 b:10 sum:11
+#    Time: 2180 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:11 sum:8
+#    Time: 2190 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:12 sum:13
+#    Time: 2200 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:12 sum:15
+#    Time: 2200 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:13 sum:10
+#    Time: 2210 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:13 sum:8
+#    Time: 2210 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:14 sum:15
+#    Time: 2220 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:15 sum:12
+#    Time: 2230 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:0 sum:1
+#    Time: 2240 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:0 sum:3
+#    Time: 2240 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:0 sum:7
+#    Time: 2240 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:15 b:1 sum:13
+#    Time: 2250 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:15 b:1 sum:9
+#    Time: 2250 ns  Iteration: 6  Instance: /generic_adder_tb
+# ** Error: a:0 b:1 sum:14
+#    Time: 2410 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:1 sum:0
+#    Time: 2410 ns  Iteration: 4  Instance: /generic_adder_tb
+# ** Error: a:0 b:2 sum:1
+#    Time: 2420 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:2 sum:7
+#    Time: 2420 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:3 sum:2
+#    Time: 2430 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:3 sum:0
+#    Time: 2430 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:4 sum:3
+#    Time: 2440 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:4 sum:13
+#    Time: 2440 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:5 sum:4
+#    Time: 2450 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:6 sum:5
+#    Time: 2460 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:6 sum:3
+#    Time: 2460 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:6 sum:15
+#    Time: 2460 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:0 b:7 sum:6
+#    Time: 2470 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:7 sum:4
+#    Time: 2470 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:7 sum:0
+#    Time: 2470 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:0 b:8 sum:7
+#    Time: 2480 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:9 sum:8
+#    Time: 2490 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:10 sum:9
+#    Time: 2500 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:10 sum:15
+#    Time: 2500 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:11 sum:10
+#    Time: 2510 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:11 sum:8
+#    Time: 2510 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:12 sum:11
+#    Time: 2520 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:12 sum:5
+#    Time: 2520 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:13 sum:12
+#    Time: 2530 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:14 sum:13
+#    Time: 2540 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:14 sum:11
+#    Time: 2540 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:14 sum:7
+#    Time: 2540 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:0 b:15 sum:14
+#    Time: 2550 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:0 b:15 sum:12
+#    Time: 2550 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:0 b:15 sum:8
+#    Time: 2550 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:0 b:0 sum:15
+#    Time: 2560 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:1 sum:0
+#    Time: 2570 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:2 sum:1
+#    Time: 2580 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:2 sum:7
+#    Time: 2580 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:3 sum:2
+#    Time: 2590 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:3 sum:0
+#    Time: 2590 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:4 sum:3
+#    Time: 2600 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:4 sum:13
+#    Time: 2600 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:5 sum:4
+#    Time: 2610 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:6 sum:5
+#    Time: 2620 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:6 sum:3
+#    Time: 2620 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:6 sum:15
+#    Time: 2620 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:1 b:7 sum:6
+#    Time: 2630 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:7 sum:4
+#    Time: 2630 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:7 sum:0
+#    Time: 2630 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:1 b:8 sum:7
+#    Time: 2640 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:9 sum:8
+#    Time: 2650 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:10 sum:9
+#    Time: 2660 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:10 sum:15
+#    Time: 2660 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:11 sum:10
+#    Time: 2670 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:11 sum:8
+#    Time: 2670 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:12 sum:11
+#    Time: 2680 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:12 sum:5
+#    Time: 2680 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:13 sum:12
+#    Time: 2690 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:14 sum:13
+#    Time: 2700 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:14 sum:11
+#    Time: 2700 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:14 sum:7
+#    Time: 2700 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:1 b:15 sum:14
+#    Time: 2710 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:1 b:15 sum:12
+#    Time: 2710 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:1 b:15 sum:8
+#    Time: 2710 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:1 b:0 sum:15
+#    Time: 2720 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:2 sum:0
+#    Time: 2740 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:4 sum:2
+#    Time: 2760 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:4 sum:14
+#    Time: 2760 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:6 sum:4
+#    Time: 2780 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:6 sum:0
+#    Time: 2780 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:8 sum:6
+#    Time: 2800 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:10 sum:8
+#    Time: 2820 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:12 sum:10
+#    Time: 2840 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:12 sum:6
+#    Time: 2840 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:14 sum:12
+#    Time: 2860 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:2 b:14 sum:8
+#    Time: 2860 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:2 b:0 sum:14
+#    Time: 2880 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:1 sum:0
+#    Time: 2890 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:3 b:2 sum:7
+#    Time: 2900 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:3 sum:4
+#    Time: 2910 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:4 sum:1
+#    Time: 2920 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:4 sum:11
+#    Time: 2920 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:3 b:4 sum:15
+#    Time: 2920 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:3 b:5 sum:6
+#    Time: 2930 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:5 sum:4
+#    Time: 2930 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:3 b:5 sum:0
+#    Time: 2930 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:3 b:6 sum:11
+#    Time: 2940 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:7 sum:8
+#    Time: 2950 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:8 sum:5
+#    Time: 2960 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:8 sum:15
+#    Time: 2960 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:3 b:9 sum:10
+#    Time: 2970 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:9 sum:8
+#    Time: 2970 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:3 b:10 sum:15
+#    Time: 2980 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:11 sum:12
+#    Time: 2990 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:12 sum:9
+#    Time: 3 us  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:12 sum:3
+#    Time: 3 us  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:3 b:12 sum:7
+#    Time: 3 us  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:3 b:13 sum:14
+#    Time: 3010 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:13 sum:12
+#    Time: 3010 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:3 b:13 sum:8
+#    Time: 3010 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:3 b:14 sum:3
+#    Time: 3020 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:15 sum:0
+#    Time: 3030 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:0 sum:13
+#    Time: 3040 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:3 b:0 sum:7
+#    Time: 3040 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:4 b:4 sum:0
+#    Time: 3080 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:8 sum:4
+#    Time: 3120 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:12 sum:8
+#    Time: 3160 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:4 b:0 sum:12
+#    Time: 3200 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:2 sum:5
+#    Time: 3220 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:2 sum:3
+#    Time: 3220 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:2 sum:11
+#    Time: 3220 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:5 b:2 sum:15
+#    Time: 3220 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:5 b:3 sum:6
+#    Time: 3230 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:3 sum:4
+#    Time: 3230 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:3 sum:0
+#    Time: 3230 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:5 b:4 sum:15
+#    Time: 3240 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:5 sum:8
+#    Time: 3250 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:6 sum:9
+#    Time: 3260 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:6 sum:15
+#    Time: 3260 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:7 sum:10
+#    Time: 3270 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:7 sum:8
+#    Time: 3270 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:8 sum:3
+#    Time: 3280 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:8 sum:5
+#    Time: 3280 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:9 sum:12
+#    Time: 3290 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:10 sum:13
+#    Time: 3300 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:10 sum:11
+#    Time: 3300 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:10 sum:3
+#    Time: 3300 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:5 b:10 sum:7
+#    Time: 3300 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:5 b:11 sum:14
+#    Time: 3310 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:11 sum:12
+#    Time: 3310 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:11 sum:8
+#    Time: 3310 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:5 b:12 sum:7
+#    Time: 3320 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:13 sum:0
+#    Time: 3330 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:14 sum:1
+#    Time: 3340 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:14 sum:7
+#    Time: 3340 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:15 sum:2
+#    Time: 3350 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:15 sum:0
+#    Time: 3350 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:5 b:0 sum:11
+#    Time: 3360 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:5 b:0 sum:13
+#    Time: 3360 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:2 sum:4
+#    Time: 3380 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:2 sum:0
+#    Time: 3380 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:4 sum:14
+#    Time: 3400 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:6 sum:8
+#    Time: 3420 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:8 sum:2
+#    Time: 3440 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:8 sum:6
+#    Time: 3440 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:10 sum:12
+#    Time: 3460 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:10 sum:8
+#    Time: 3460 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:6 b:12 sum:6
+#    Time: 3480 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:14 sum:0
+#    Time: 3500 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:0 sum:10
+#    Time: 3520 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:6 b:0 sum:14
+#    Time: 3520 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:1 sum:4
+#    Time: 3530 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:1 sum:0
+#    Time: 3530 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:7 b:2 sum:11
+#    Time: 3540 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:3 sum:8
+#    Time: 3550 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:4 sum:13
+#    Time: 3560 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:4 sum:15
+#    Time: 3560 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:5 sum:10
+#    Time: 3570 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:5 sum:8
+#    Time: 3570 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:6 sum:15
+#    Time: 3580 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:7 sum:12
+#    Time: 3590 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:8 sum:1
+#    Time: 3600 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:8 sum:3
+#    Time: 3600 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:8 sum:7
+#    Time: 3600 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:7 b:9 sum:14
+#    Time: 3610 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:9 sum:12
+#    Time: 3610 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:9 sum:8
+#    Time: 3610 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:7 b:10 sum:3
+#    Time: 3620 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:11 sum:0
+#    Time: 3630 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:12 sum:5
+#    Time: 3640 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:12 sum:7
+#    Time: 3640 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:13 sum:2
+#    Time: 3650 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:13 sum:0
+#    Time: 3650 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:14 sum:7
+#    Time: 3660 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:15 sum:4
+#    Time: 3670 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:0 sum:9
+#    Time: 3680 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:7 b:0 sum:11
+#    Time: 3680 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:7 b:0 sum:15
+#    Time: 3680 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:9 b:2 sum:9
+#    Time: 3860 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:2 sum:15
+#    Time: 3860 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:3 sum:10
+#    Time: 3870 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:3 sum:8
+#    Time: 3870 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:4 sum:11
+#    Time: 3880 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:4 sum:5
+#    Time: 3880 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:5 sum:12
+#    Time: 3890 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:6 sum:13
+#    Time: 3900 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:6 sum:11
+#    Time: 3900 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:6 sum:7
+#    Time: 3900 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:9 b:7 sum:14
+#    Time: 3910 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:7 sum:12
+#    Time: 3910 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:7 sum:8
+#    Time: 3910 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:9 b:8 sum:15
+#    Time: 3920 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:9 sum:0
+#    Time: 3930 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:10 sum:1
+#    Time: 3940 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:10 sum:7
+#    Time: 3940 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:11 sum:2
+#    Time: 3950 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:11 sum:0
+#    Time: 3950 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:12 sum:3
+#    Time: 3960 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:12 sum:13
+#    Time: 3960 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:13 sum:4
+#    Time: 3970 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:14 sum:5
+#    Time: 3980 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:14 sum:3
+#    Time: 3980 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:14 sum:15
+#    Time: 3980 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:9 b:15 sum:6
+#    Time: 3990 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:9 b:15 sum:4
+#    Time: 3990 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:9 b:15 sum:0
+#    Time: 3990 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:9 b:0 sum:7
+#    Time: 4 us  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:2 sum:8
+#    Time: 4020 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:4 sum:10
+#    Time: 4040 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:4 sum:6
+#    Time: 4040 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:6 sum:12
+#    Time: 4060 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:6 sum:8
+#    Time: 4060 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:8 sum:14
+#    Time: 4080 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:10 sum:0
+#    Time: 4100 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:12 sum:2
+#    Time: 4120 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:12 sum:14
+#    Time: 4120 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:14 sum:4
+#    Time: 4140 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:10 b:14 sum:0
+#    Time: 4140 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:10 b:0 sum:6
+#    Time: 4160 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:1 sum:8
+#    Time: 4170 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:11 b:2 sum:15
+#    Time: 4180 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:3 sum:12
+#    Time: 4190 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:4 sum:9
+#    Time: 4200 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:4 sum:3
+#    Time: 4200 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:11 b:4 sum:7
+#    Time: 4200 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:11 b:5 sum:14
+#    Time: 4210 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:5 sum:12
+#    Time: 4210 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:11 b:5 sum:8
+#    Time: 4210 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:11 b:6 sum:3
+#    Time: 4220 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:7 sum:0
+#    Time: 4230 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:8 sum:13
+#    Time: 4240 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:8 sum:7
+#    Time: 4240 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:11 b:9 sum:2
+#    Time: 4250 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:9 sum:0
+#    Time: 4250 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:11 b:10 sum:7
+#    Time: 4260 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:11 sum:4
+#    Time: 4270 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:12 sum:1
+#    Time: 4280 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:12 sum:11
+#    Time: 4280 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:11 b:12 sum:15
+#    Time: 4280 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:11 b:13 sum:6
+#    Time: 4290 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:13 sum:4
+#    Time: 4290 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:11 b:13 sum:0
+#    Time: 4290 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:11 b:14 sum:11
+#    Time: 4300 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:15 sum:8
+#    Time: 4310 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:0 sum:5
+#    Time: 4320 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:11 b:0 sum:15
+#    Time: 4320 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:12 b:4 sum:8
+#    Time: 4360 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:8 sum:12
+#    Time: 4400 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:12 sum:0
+#    Time: 4440 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:12 b:0 sum:4
+#    Time: 4480 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:2 sum:13
+#    Time: 4500 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:2 sum:11
+#    Time: 4500 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:2 sum:3
+#    Time: 4500 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:13 b:2 sum:7
+#    Time: 4500 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:13 b:3 sum:14
+#    Time: 4510 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:3 sum:12
+#    Time: 4510 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:3 sum:8
+#    Time: 4510 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:13 b:4 sum:7
+#    Time: 4520 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:5 sum:0
+#    Time: 4530 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:6 sum:1
+#    Time: 4540 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:6 sum:7
+#    Time: 4540 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:7 sum:2
+#    Time: 4550 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:7 sum:0
+#    Time: 4550 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:8 sum:11
+#    Time: 4560 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:8 sum:13
+#    Time: 4560 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:9 sum:4
+#    Time: 4570 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:10 sum:5
+#    Time: 4580 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:10 sum:3
+#    Time: 4580 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:10 sum:11
+#    Time: 4580 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:13 b:10 sum:15
+#    Time: 4580 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:13 b:11 sum:6
+#    Time: 4590 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:11 sum:4
+#    Time: 4590 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:11 sum:0
+#    Time: 4590 ns  Iteration: 8  Instance: /generic_adder_tb
+# ** Error: a:13 b:12 sum:15
+#    Time: 4600 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:13 sum:8
+#    Time: 4610 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:14 sum:9
+#    Time: 4620 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:14 sum:15
+#    Time: 4620 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:15 sum:10
+#    Time: 4630 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:15 sum:8
+#    Time: 4630 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:13 b:0 sum:3
+#    Time: 4640 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:13 b:0 sum:5
+#    Time: 4640 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:2 sum:12
+#    Time: 4660 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:2 sum:8
+#    Time: 4660 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:4 sum:6
+#    Time: 4680 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:6 sum:0
+#    Time: 4700 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:8 sum:10
+#    Time: 4720 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:8 sum:14
+#    Time: 4720 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:10 sum:4
+#    Time: 4740 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:10 sum:0
+#    Time: 4740 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:14 b:12 sum:14
+#    Time: 4760 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:14 sum:8
+#    Time: 4780 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:0 sum:2
+#    Time: 4800 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:14 b:0 sum:6
+#    Time: 4800 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:1 sum:12
+#    Time: 4810 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:1 sum:8
+#    Time: 4810 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:15 b:2 sum:3
+#    Time: 4820 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:3 sum:0
+#    Time: 4830 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:4 sum:5
+#    Time: 4840 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:4 sum:7
+#    Time: 4840 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:5 sum:2
+#    Time: 4850 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:5 sum:0
+#    Time: 4850 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:6 sum:7
+#    Time: 4860 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:7 sum:4
+#    Time: 4870 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:8 sum:9
+#    Time: 4880 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:8 sum:11
+#    Time: 4880 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:8 sum:15
+#    Time: 4880 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:15 b:9 sum:6
+#    Time: 4890 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:9 sum:4
+#    Time: 4890 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:9 sum:0
+#    Time: 4890 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Error: a:15 b:10 sum:11
+#    Time: 4900 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:11 sum:8
+#    Time: 4910 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:12 sum:13
+#    Time: 4920 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:12 sum:15
+#    Time: 4920 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:13 sum:10
+#    Time: 4930 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:13 sum:8
+#    Time: 4930 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:14 sum:15
+#    Time: 4940 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:15 sum:12
+#    Time: 4950 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:0 sum:1
+#    Time: 4960 ns  Iteration: 3  Instance: /generic_adder_tb
+# ** Error: a:15 b:0 sum:3
+#    Time: 4960 ns  Iteration: 5  Instance: /generic_adder_tb
+# ** Error: a:15 b:0 sum:7
+#    Time: 4960 ns  Iteration: 7  Instance: /generic_adder_tb
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 5130 ns  Iteration: 0  Region: /generic_adder_tb/sequential_stimuli
+# End time: 10:09:43 on Oct 04,2016, Elapsed time: 0:00:39
+# Errors: 604, Warnings: 6
