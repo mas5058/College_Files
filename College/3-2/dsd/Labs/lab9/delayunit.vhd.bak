@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_signed.all;
+
+entity delayunit is 
+	port(delay : in std_logic;
+		  clk   : in std_logic;
+		  resetn : in std_logic;
+		  flag  : out std_logic;
+		  test  : out std_logic);
+	end delayunit;
+
+architecture arch of delayunit is
+	--ask prof
+	end arch

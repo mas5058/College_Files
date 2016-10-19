@@ -1,0 +1,66 @@
+id: 1-9.0.r9/0
+type: dir
+count: 0
+cpath: /CompProSolve/Assignment4
+copyroot: 0 /
+
+PLAIN
+K 12
+Assignement3
+V 20
+dir 2-8.0.r8/3889103
+K 24
+Assignment 1-Number Swap
+V 21
+dir 1g-8.0.r8/3890727
+K 24
+Assignment 2 - Fractions
+V 21
+dir 1n-8.0.r8/3891703
+K 11
+Assignment4
+V 14
+dir 1-9.0.r9/0
+END
+ENDREP
+id: 0-8.0.r9/294
+type: dir
+pred: 0-8.0.r8/3892037
+count: 1
+text: 9 82 199 199 f1d8a38d7754ca492f37a8fee0e80d11
+cpath: /CompProSolve
+copyroot: 0 /
+
+PLAIN
+K 12
+CompProSolve
+V 16
+dir 0-8.0.r9/294
+K 19
+Electronic 11th.pdf
+V 22
+file c-1.0.r1/22060874
+K 7
+Signals
+V 21
+dir d-1.0.r1/22062276
+K 3
+hdl
+V 17
+dir k-1.0.r6/5253
+END
+ENDREP
+id: 0.0.r9/621
+type: dir
+pred: 0.0.r8/3892399
+count: 9
+text: 9 441 167 167 43ea7eaf42174ee74ad599968b085a3f
+cpath: /
+copyroot: 0 /
+
+0-1.0.r7/1040 delete-dir false false /Comp Pro Solving
+
+_1.0.t8-c add-dir false false /CompProSolve/Assignment4
+
+
+621 753

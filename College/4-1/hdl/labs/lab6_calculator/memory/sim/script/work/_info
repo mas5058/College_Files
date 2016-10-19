@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mike/Documents/GitHub/College_Files/College/4-1/hdl/labs/lab6_calculator/memory/sim/script
+Ememory
+Z1 w1476904744
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8../../src/memory.vhd
+Z6 F../../src/memory.vhd
+l0
+L9
+VIA;E`[0X1S2ChSB9zbYnJ2
+!s100 NeWb[N5ARR?JDfz@```G?3
+Z7 OV;C;10.4b;61
+31
+Z8 !s110 1476909200
+!i10b 1
+Z9 !s108 1476909200.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|../../src/memory.vhd|
+Z11 !s107 ../../src/memory.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1
+Abeh
+R2
+R3
+R4
+DEx4 work 6 memory 0 22 IA;E`[0X1S2ChSB9zbYnJ2
+l26
+L21
+VCGWTSNdkkWc]X7>J@CMCU2
+!s100 2dXD[Ri1k1_[8z2YL:M^i2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ememory_tb
+R1
+R2
+R3
+R4
+R0
+Z14 8../src/memory_tb.vhd
+Z15 F../src/memory_tb.vhd
+l0
+L9
+VY3hgViR?H7VGW3>7[XLW02
+!s100 Wlf5@ic8AJ13<OBO25M?c1
+R7
+31
+Z16 !s110 1476909201
+!i10b 1
+Z17 !s108 1476909201.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|../src/memory_tb.vhd|
+Z19 !s107 ../src/memory_tb.vhd|
+!i113 1
+R12
+R13
+Abeh
+R2
+R3
+R4
+DEx4 work 9 memory_tb 0 22 Y3hgViR?H7VGW3>7[XLW02
+l47
+L12
+VNd:TC@zKPN`h0=oBeMXJn3
+!s100 cz04OHbS;ISXKCR;kzlHf1
+R7
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13

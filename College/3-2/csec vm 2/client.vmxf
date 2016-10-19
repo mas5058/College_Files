@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<VMId type="string">52 a9 d1 31 28 65 a9 a8-22 c3 94 73 c6 63 df 2f</VMId>
+<vmxPathName type="string">client.vmx</vmxPathName></VM><tools-manifest><vmaudio version="5.10.0.3506" installed="TRUE"/><vmrawdsk version="0.9.6.0" installed="TRUE"/><buslogic version="1.2.1.0" installed="TRUE"/><vmci version="7.2.30.0" installed="FALSE"/><hgfs_driver version="8.0.60.0" installed="TRUE"/><hgfs_provider version="8.0.21.0" installed="TRUE"/><vmmemctl version="7.3.4.0" installed="TRUE"/><vmsync version="1.0.0.0" installed="FALSE"/><vmxnet version="2.0.4.2" installed="FALSE"/><vmxnet3 version="1.0.3.0" installed="TRUE"/><vmmouse version="12.4.0.5" installed="TRUE"/><svga version="11.06.00.0038" installed="TRUE"/><vcbprovider version="8.4.8.19539" installed="TRUE"/><vmguestlib version="8.4.8.19539" installed="TRUE"/><vmguestlibjava version="8.4.8.19539" installed="TRUE"/><xferlogs version="8.4.8.19539" installed="TRUE"/><resolutionset version="8.4.8.19539" installed="TRUE"/><vmcontrolpanel version="8.4.8.19539" installed="TRUE"/><vmip version="8.4.8.19539" installed="FALSE"/><vmtoolsd version="8.4.8.19539" installed="TRUE"/><vmwaretray version="8.4.8.19539" installed="TRUE"/><vmwareuser version="8.4.8.19539" installed="TRUE"/><cpllauncher version="8.4.8.19539" installed="TRUE"/><upgrader version="8.4.8.19539" installed="TRUE"/><hgfsclient version="8.4.8.19539" installed="TRUE"/><libvassert version="8.4.8.19539" installed="TRUE"/><vmacthlp version="8.4.8.19539" installed="TRUE"/></tools-manifest></Foundry>

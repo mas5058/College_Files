@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="hw6">
+		<CBX_INST_ENTRY INSTANCE_NAME="|hw6|lpm_mux:Mux0" CBX_FILE_NAME="mux_umc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

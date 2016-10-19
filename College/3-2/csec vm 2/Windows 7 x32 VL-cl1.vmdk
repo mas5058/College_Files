@@ -1,0 +1,20 @@
+# Disk DescriptorFile
+version=1
+encoding="windows-1252"
+CID=bf4f5a95
+parentCID=19229f14
+isNativeSnapshot="no"
+createType="twoGbMaxExtentSparse"
+parentFileNameHint="C:\Virtual Machines\VL_WIN7_32\Windows 7 x32 VL-000007.vmdk"
+# Extent description
+RW 8304640 SPARSE "Windows 7 x32 VL-cl1-s001.vmdk"
+RW 8304640 SPARSE "Windows 7 x32 VL-cl1-s002.vmdk"
+RW 8304640 SPARSE "Windows 7 x32 VL-cl1-s003.vmdk"
+RW 8304640 SPARSE "Windows 7 x32 VL-cl1-s004.vmdk"
+RW 8304640 SPARSE "Windows 7 x32 VL-cl1-s005.vmdk"
+RW 419840 SPARSE "Windows 7 x32 VL-cl1-s006.vmdk"
+
+# The Disk Data Base 
+#DDB
+
+ddb.longContentID = "e9a6cb10faa09a56b13d613dbf4f5a95"

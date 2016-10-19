@@ -1,0 +1,35 @@
+|hw4_2
+a => z4.IN0
+a => z6.IN0
+a => z0.IN0
+a => z2.IN0
+b => z2.IN1
+b => z6.IN1
+b => z0.IN1
+b => z4.IN1
+c => z1.IN1
+c => z3.IN1
+c => z5.IN1
+c => z7.IN1
+c => z0.IN1
+c => z2.IN1
+c => z4.IN1
+c => z6.IN1
+enable => z0.OUTPUTSELECT
+enable => z1.OUTPUTSELECT
+enable => z2.OUTPUTSELECT
+enable => z3.OUTPUTSELECT
+enable => z4.OUTPUTSELECT
+enable => z5.OUTPUTSELECT
+enable => z6.OUTPUTSELECT
+enable => z7.OUTPUTSELECT
+z0 <= z0.DB_MAX_OUTPUT_PORT_TYPE
+z1 <= z1.DB_MAX_OUTPUT_PORT_TYPE
+z2 <= z2.DB_MAX_OUTPUT_PORT_TYPE
+z3 <= z3.DB_MAX_OUTPUT_PORT_TYPE
+z4 <= z4.DB_MAX_OUTPUT_PORT_TYPE
+z5 <= z5.DB_MAX_OUTPUT_PORT_TYPE
+z6 <= z6.DB_MAX_OUTPUT_PORT_TYPE
+z7 <= z7.DB_MAX_OUTPUT_PORT_TYPE
+
+

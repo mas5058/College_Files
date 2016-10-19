@@ -1,0 +1,19 @@
+|hw8
+start => nextstate.OUTPUTSELECT
+start => nextstate.OUTPUTSELECT
+start => nextstate.OUTPUTSELECT
+start => nextstate.OUTPUTSELECT
+start => nextstate.idle.DATAA
+full => nextstate.OUTPUTSELECT
+full => nextstate.OUTPUTSELECT
+full => nextstate.OUTPUTSELECT
+full => nextstate.OUTPUTSELECT
+timer => count[0].CLK
+timer => count[1].CLK
+timer => count[2].CLK
+timer => count[3].CLK
+timer => current~1.DATAIN
+water <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+rotate <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+
+

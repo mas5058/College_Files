@@ -8,10 +8,10 @@ entity alu2bitoper is
 		  oper : in std_logic_vector(1 downto 0);
 		  result    : out std_logic_vector(7 downto 0);
 	);
-	end alu;
+	end alu2bitoper;
 	
 
-	architecture arch of alu is
+	architecture arch of alu2bitoper is
 	signal rez,signeda,signedb, unsigneda, unsignedb : std_logic_vector(7 downto 0);
 	begin
 	result <= rez;

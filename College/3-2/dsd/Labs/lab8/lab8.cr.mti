@@ -1,0 +1,34 @@
+E:/dsd/Labs/lab8/timer.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/dsd/Labs/lab8/timer.vhd
+Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity timer
+-- Compiling architecture arch of timer
+
+} {} {}} E:/dsd/Labs/lab8/bcd.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/dsd/Labs/lab8/bcd.vhd
+Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity bcd
+-- Compiling architecture arch of bcd
+
+} {} {}} E:/dsd/Labs/lab8/lab8.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/dsd/Labs/lab8/lab8.vhd
+Model Technology ModelSim SE-64 vcom 10.3c Compiler 2014.07 Jul 19 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity lab8
+-- Compiling architecture arch of lab8
+
+} {} {}}

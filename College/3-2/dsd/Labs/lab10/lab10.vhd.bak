@@ -1,0 +1,242 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_signed.all;
+
+entity lab10 is
+  port(dime, nickel, quarter : in  std_logic;
+       coin_return           : in  std_logic;
+       dispense              : in  std_logic;
+       clk                   : in  std_logic;
+       reset                 : in  std_logic;
+       changeback            : out std_logic;
+       red_bull              : out std_logic;
+       hex0, hex1            : out std_logic_vector(6 downto 0));
+end lab10;
+
+architecture arch of lab10 is
+  type state_type is (wait1, nickelstate, quarterstate, dimestate, enough, change, excess, vend);
+  signal current, next_state : state_type;
+  signal money0, money1            : std_logic_vector(3 downto 0) := "0000";
+  component bcd
+    port(inputs : in  std_logic_vector (3 downto 0);
+         hex    : out std_logic_vector (6 downto 0)
+         );
+  end component;
+begin
+
+  bcd2ssd0 : bcd port map(
+    inputs => money0,
+    hex    => hex0);
+
+  bcd2ssd1 : bcd port map(
+    inputs => money1,
+    hex    => hex1);
+
+--  process(clk)
+--  begin
+--    if (clk = '1' and clk'event) then
+--      current <= next_state;
+--    end if;
+--  end process;
+  --see evil toaster in lecture notes
+  --end process;
+  --rest of code needs to be edited.
+  process(next_state, money0, money1)
+	begin
+	case(next_state) is
+		when nickelstate =>
+			if (money0 = "0101") then
+				money1 <= money1 + '1';
+				money0 <= "0000";
+			else
+				money0 <= "0101";
+				money1 <= money1;
+			end if;
+		when dimestate => money1 <= money1 + '1';
+		when quarterstate =>
+			if (money0 = "0101") then
+				money1 <= money1 + "0011";
+				money0 <= "0000";
+			else
+				money1 <= money1 + "0010";
+				money0 <= "0101";
+			end if;
+		end case;
+  -- begin
+	-- if reset = '0' then
+		-- money0 <= "0000";
+		-- money1 <= "0000";
+	-- elsif (clk = '1' and clk'event) then
+		-- if (next_state = nickelstate) then
+			-- if (money0 = "0101") then
+				-- money1 <= money1 + '1';
+				-- money0 <= "0000";
+			-- else
+				-- money0 <= "0101";
+				-- money1 <= money1;
+			-- end if;
+		-- elsif (next_state = dimestate) then
+			-- money1 <= money1 + '1';
+		-- elsif (next_state = quarterstate) then
+			-- if (money0 = "0101") then
+				-- money1 <= money1 + "0011";
+				-- money0 <= "0000";
+			-- else
+				-- money1 <= money1 + "0010";
+				-- money0 <= "0101";
+			-- end if;
+		-- end if;
+--	else
+--		money0 <= money0;
+--		money1 <= money1;
+	--end if;
+--    case(next_state) is
+--      when nickelstate => money <= money + "101";
+--      when dimestate   => money <= money + "1010";
+--      when quaterstate => money <= money + "11001";
+--      when vend   => money <= money - "01001011";
+--      when others => money <= money;
+--    end case;
+  end process;
+  caseproc:process(current, money1, money0, dime, quarter, nickel)
+  begin
+  case(current) is
+	when wait1 => 
+		if (money1 >= "1000") or (money0 = "0101" and money1 >= "0111") then
+			next_state <= enough;
+		elsif dime = '1' then
+			next_state <= dimestate;
+		elsif quarter = '1' then
+			next_state <= quarterstate;
+		elsif nickel = '1' then
+			next_state <= nickelstate;
+		else
+			next_state <= wait1;
+		end if;
+	when dimestate =>
+		if (money1 >= "1000") or (money0 = "0101" and money1 >= "0111") then
+			current <= enough;
+		else
+			current <= wait1;
+		end if;
+	when quarterstate =>
+		if (money1 >= "1000") or (money0 = "0101" and money1 >= "0111") then
+			next_state <= enough;
+		else
+			next_state <= wait1;
+		end if;
+	when nickelstate =>
+		if (money1 >= "1000") or (money0 = "0101" and money1 >= "0111") then
+			next_state <= enough;
+		else
+			next_state <= wait1;
+		end if;
+	when enough =>
+		if (dispense = '1') then
+			next_state <= vend;
+		elsif (dime = '1' or quarter = '1' or nickel = '1') then
+			next_state <= excess;
+		elsif coin_return = '1' then
+			next_state <= change;
+		else
+			next_state <= enough;
+		end if;
+	when excess => 
+		if (dispense = '1') then
+			next_state <= vend;
+		elsif (dime = '1' or quarter = '1' or nickel = '1') then
+			next_state <= excess;
+		elsif coin_return = '1' then
+			next_state <= change;
+		else
+			next_state <= excess;
+		end if;
+	when vend =>
+		if (money1 > "0000") or (money0 > "0000") then	
+			next_state => change;
+		else
+			next_state => wait1;
+		end if;
+	when others => next_state => wait1;
+	end case;
+	
+	
+	
+  
+
+  -- process(dime, nickel, quarter, coin_return, dispense, clk, reset, current, money0, money1)
+  -- begin
+	 -- if current = vend then
+      -- if (money0 = ("0000")) and (money1 = ("0000")) then
+        -- next_state <= wait1;
+      -- else
+        -- next_state <= change;
+      -- end if;
+	 -- elsif (current = enough or current = excess) then
+      -- if dime = '1' or quarter = '1' or nickel = '1' then
+        -- if dispense = '1' then
+          -- next_state <= vend;
+		  -- elsif (money1 >= "1000" or (money1 = "0111" and money0 = "0101")) then
+          -- next_state <= excess;
+		  -- end if;
+		-- end if;
+    -- else
+      -- if dime = '1' then
+        -- if (money0 = "0101" and money1 = "0111") then
+          -- next_state <= enough;
+        -- else
+          -- next_state <= dimestate;
+        -- end if;
+      -- elsif quarter = '1' then
+        -- if (money0 = "0101" and money1 = "0111") then
+          -- next_state <= enough;
+        -- else
+          -- next_state <= quarterstate;
+        -- end if;
+      -- elsif nickel = '1' then
+        -- if (money0 = "0101" and money1 = "0111") then
+          -- next_state <= enough;
+        -- else
+          -- next_state <= nickelstate;
+        -- end if;
+      -- end if;
+    
+--  		  else
+--			 next_state <= next_state;
+       -- end if;
+   --   end if;
+   
+--end process;
+
+	process(next_state)
+	begin
+		if next_state = change then
+			changeback <= '1';
+			red_bull <= '0';
+		elsif (next_state = vend) then
+			red_bull <= '1';
+			changeback <= '0';
+		else
+			red_bull <= '0';
+			changeback <= '0';
+		end if;
+	end process;
+
+--	process( money0, money1)
+--	begin
+--		if (money1 < "0111") then
+--			changeback <= '1';
+--		else
+--			changeback <= '0';
+--		end if;
+--	end process;
+sync: process(clk, reset)
+	begin
+		if reset = '0' then
+			current <= wait1;
+		elsif clk'event and clk = '1' then
+			current <= next_state;
+		end if;
+	end process;
+end arch;

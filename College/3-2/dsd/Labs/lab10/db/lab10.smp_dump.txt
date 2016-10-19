@@ -1,0 +1,11 @@
+
+State Machine - |lab10|current
+Name current.state_bit_3 current.state_bit_2 current.state_bit_1 current.state_bit_0 
+current.wait1 0 0 0 0 
+current.nickelstate 1 0 0 0 
+current.quarterstate 1 1 0 0 
+current.dimestate 1 1 1 0 
+current.enough 1 1 1 1 
+current.change 0 1 1 1 
+current.excess 0 0 1 1 
+current.vend 0 0 0 1 

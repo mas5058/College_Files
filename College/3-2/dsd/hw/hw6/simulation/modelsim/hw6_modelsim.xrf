@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, E:/dsd/hw/hw6/hw6_1.vhd
+source_file = 1, E:/dsd/hw/hw6/hw6.vhd
+source_file = 1, E:/dsd/hw/hw6/Waveform.vwf
+source_file = 1, E:/dsd/hw/hw6/db/hw6.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = hw6
+instance = comp, \k~I , k, hw6, 1
+instance = comp, \clk~I , clk, hw6, 1
+instance = comp, \resetn~I , resetn, hw6, 1
+instance = comp, \j~I , j, hw6, 1
+instance = comp, \sq~0 , sq~0, hw6, 1
+instance = comp, \q~I , q, hw6, 1
+instance = comp, \qn~I , qn, hw6, 1

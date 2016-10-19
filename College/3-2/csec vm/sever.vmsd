@@ -1,0 +1,5 @@
+.encoding = "windows-1252"
+cloneOf0 = "C:\Virtual Machines\Windows Server 2012\VL_W2K12.vmx"
+numCloneOf = "1"
+sentinel0 = "Windows Server 2012-cl1.vmdk"
+numSentinels = "1"

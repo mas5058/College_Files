@@ -1,0 +1,8 @@
+
+State Machine - |hw8|current
+Name current.spin current.rinse current.agitate current.fill current.idle 
+current.idle 0 0 0 0 0 
+current.fill 0 0 0 1 1 
+current.agitate 0 0 1 0 1 
+current.rinse 0 1 0 0 1 
+current.spin 1 0 0 0 1 

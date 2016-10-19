@@ -1,0 +1,34 @@
+# do sim.do
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:33:20 on Oct 19,2016
+# vcom -reportprogress 300 -93 -work work ../../src/memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memory
+# -- Compiling architecture beh of memory
+# End time: 16:33:20 on Oct 19,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 16:33:21 on Oct 19,2016
+# vcom -reportprogress 300 -93 -work work ../src/memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memory_tb
+# -- Compiling architecture beh of memory_tb
+# ** Warning: ../src/memory_tb.vhd(27): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 16:33:21 on Oct 19,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim -novopt memory_tb 
+# Start time: 16:33:22 on Oct 19,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory_tb(beh)
+# Loading work.memory(beh)
+# End time: 18:34:07 on Oct 19,2016, Elapsed time: 2:00:45
+# Errors: 0, Warnings: 0
