@@ -9,11 +9,11 @@ entity state_machine is
   port (
     clk               : in std_logic;
     reset             : in std_logic;
-    execute   : in std_logic;
-    memsave    : in std_logic;
-    memrecall        : in std_logic;
-    we          : out std_logic
-    address          : out std_logic_vector(1 downto 0)
+    execute           : in std_logic;
+    memsave           : in std_logic;
+    memrecall         : in std_logic;
+    we                : out std_logic
+    address           : out std_logic_vector(1 downto 0)
   );
   
 end state_machine;
@@ -45,7 +45,7 @@ end process;
 process(state_reg,nearby_opponent,friend_wounded,me_wounded)
 begin
   -- default values
-  fighting    <= '0';
+  --fighting    <= '0';
   state_next <= state_reg;    -- prevents a latch
   case state_reg is  
     when sWait =>
@@ -60,8 +60,6 @@ begin
         state_next <= smemcall;
       elsif (smemsave = '1') then
         state_next  <= smemsave;
-      elsif (smemcall = '0') then
-        state_next <= smemcall;
       end if;
     when smemcall =>
       if (me_wounded = '1') then  

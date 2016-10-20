@@ -3,22 +3,21 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.std_logic_signed.all;
 
-entity toplevelcount is
+entity toplev is
     port(
     clk                   : in std_logic;
     reset                 : in std_logic;
-    --enable                : in std_logic;
 	switches              : in std_logic_vector(7 downto 0);
-	memrecal                    : in std_logic;
-	memsave                    : in std_logic);
-	execute                    : in std_logic;
+	memrecal              : in std_logic;
+	memsave               : in std_logic;
+	execute               : in std_logic;
     seven_seg_out         : out std_logic_vector (7 downto 0)
 );
-end entity toplevelcount;
+end entity toplev;
 
-architecture arch of toplevelcount is
-signal sum_sig, sum : std_logic_vector(3 downto 0) := (others => '0');
-signal enable : std_logic;
+architecture arch of toplev is
+signal datain,dataout : std_logic_vector(7 downto 0) := (others => '0');
+signal enable,wesig,addr,rezsig : std_logic;
 
 component alu2bitoper is
 	port(
@@ -39,16 +38,15 @@ component memory is
   );
 end component;
 
-component generic_counter is
-  generic (
-    max_count       : integer := 3
-  );
+
+component rising_edge_synchronizer is 
   port (
-    clk             : in  std_logic; 
-    reset           : in  std_logic;
-    output          : out std_logic
-  );  
-end component;  
+    clk               : in std_logic;
+    reset             : in std_logic;
+    input             : in std_logic;
+    edge              : out std_logic
+  );
+end component;
 
 component seven_seg is 
     port(inputs  : in std_logic_vector (3 downto 0);
@@ -59,29 +57,29 @@ component seven_seg is
         end component;
   
  begin
- adder:generic_adder_beh
-	port map(
-	a => sum_sig,
-	b => "0001",
-	sum => sum,
-	cin => '0',
-	cout=> open);
- 
- counter:generic_counter
-    port map(
-    clk => clk,
-    reset => reset,
-    output => enable
-    );
+	mem: memory 
+		port map(
+			clk => clk,
+			we => wesig,
+			addr => addr,
+			din => datain,
+			dout => dataout)
   
-  uut: seven_seg
-    port map(
-        inputs => sum_sig, 
-        clk => clk,
-        reset => reset,
-        hex0 => seven_seg_out
+  
+    uut: seven_seg
+		port map(
+			inputs => sum_sig, 
+			clk => clk,
+			reset => reset,
+			hex0 => seven_seg_out
         );
-		
+	alu:alu2bitoper
+		port map(
+			a => dataout,
+			b => switches,
+			oper => 
+			result => rezsig
+			);
 	sumreg : process (reset,enable,clk)
 	begin
 	if reset = '1' then
