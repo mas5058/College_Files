@@ -56,20 +56,22 @@ begin
       end if;  
     when sexecute =>
       execute <= '1';
-      if (smemcall = '1') then  
+      if (memcall = '1') then  
         state_next <= smemcall;
       elsif (smemsave = '1') then
         state_next  <= smemsave;
       end if;
     when smemcall =>
-      if (me_wounded = '1') then  
-        state_next <= sFlee;
-      elsif (friend_wounded = '0') then
-        state_next <= sAttack;
+      if (memsave = '1') then  
+        state_next <= smemsave;
+	elsif (execute = '1') then
+		state_next <= sexecute;
       end if;
-    when sFlee =>
-      if (me_wounded = '0') then
-        state_next <= sWait;
+	when smemsave =>
+      if (memcall = '1') then  
+        state_next <= smemcall;
+	elsif (execute = '1') then
+		state_next <= sexecute;
       end if;
     when others =>
       state_next <= sWait;

@@ -63,7 +63,9 @@ component seven_seg is
 			we => wesig,
 			addr => addr,
 			din => datain,
-			dout => dataout)
+			dout => dataout);
+	
+	controlun:state
   
   
     uut: seven_seg
