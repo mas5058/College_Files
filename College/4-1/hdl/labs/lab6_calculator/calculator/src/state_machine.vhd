@@ -12,7 +12,7 @@ entity state_machine is
     execute           : in std_logic;
     memsave           : in std_logic;
     memrecall         : in std_logic;
-    we                : out std_logic
+    we                : out std_logic;
     address           : out std_logic_vector(1 downto 0)
   );
   

@@ -8,7 +8,7 @@ entity toplev is
     clk                   : in std_logic;
     reset                 : in std_logic;
 	switches              : in std_logic_vector(7 downto 0);
-	memrecal              : in std_logic;
+	memrecall              : in std_logic;
 	memsave               : in std_logic;
 	execute               : in std_logic;
     seven_seg_out         : out std_logic_vector (7 downto 0)
@@ -38,6 +38,19 @@ component memory is
   );
 end component;
 
+component state_machine is 
+  port (
+    clk               : in std_logic;
+    reset             : in std_logic;
+    execute           : in std_logic;
+    memsave           : in std_logic;
+    memrecall         : in std_logic;
+    we                : out std_logic
+    address           : out std_logic_vector(1 downto 0)
+  );
+  
+end component;
+
 
 component rising_edge_synchronizer is 
   port (
@@ -65,7 +78,16 @@ component seven_seg is
 			din => datain,
 			dout => dataout);
 	
-	controlun:state
+	controlun:state_machine
+		port map(
+			clk => clk,
+			we => wesig,
+			address => addr,
+			execute => execute,
+			memrecall => memrecall,
+			memsave => memsave,
+			we => wesig
+			);
   
   
     uut: seven_seg
@@ -85,9 +107,15 @@ component seven_seg is
 	sumreg : process (reset,enable,clk)
 	begin
 	if reset = '1' then
-		sum_sig <= (others => '0');
+		rezsig <= (others => '0');
+		datain <= (others => '0');
+		dataout <= (others => '0');
+		enable <= (others => '0');
+		wesig <= (others => '0');
+		addr <= (others => '0');
+		
 	elsif ((enable = '1') and (rising_edge(clk))) then
-		sum_sig <= sum;
+		rezsig <= sum;
 	end if;
 end process;
 
