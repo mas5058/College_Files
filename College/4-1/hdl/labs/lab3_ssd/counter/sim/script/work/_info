@@ -87,7 +87,7 @@ R18
 R10
 R11
 Egeneric_adder_beh
-Z19 w1475600175
+Z19 w1475600203
 Z20 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
@@ -100,9 +100,9 @@ VZM:m22W6n_OU0[flII;@<2
 !s100 OOaH7j]OJo2FNLlk`2n1j2
 R6
 31
-Z24 !s110 1475600180
+Z24 !s110 1476807496
 !i10b 1
-Z25 !s108 1475600179.000000
+Z25 !s108 1476807495.000000
 Z26 !s90 -reportprogress|300|-93|-work|work|../../src/generic_adder_beh.vhd|
 Z27 !s107 ../../src/generic_adder_beh.vhd|
 !i113 0
@@ -117,8 +117,8 @@ DEx4 work 17 generic_adder_beh 0 22 ZM:m22W6n_OU0[flII;@<2
 R24
 l27
 L22
-V`6m2=A[OPaX[9nNMEn75F0
-!s100 ^:76WR@l`PFz^zOTk<kei1
+V`TmAYMEie]6iDi[fmKbN?0
+!s100 C_=F9?KzS]<`1Fa=5>ekI0
 R6
 !i10b 1
 R25
@@ -142,7 +142,7 @@ R6
 31
 R24
 !i10b 1
-Z31 !s108 1475600180.000000
+Z31 !s108 1476807496.000000
 Z32 !s90 -reportprogress|300|-93|-work|work|../../src/generic_counter.vhd|
 Z33 !s107 ../../src/generic_counter.vhd|
 !i113 0
@@ -182,11 +182,11 @@ V4ZCUI;=IXS^=AHWgm?[J]2
 !s100 Hf[I_S=W]kgmAXj@i>g:N0
 R6
 31
-R24
+Z39 !s110 1476807497
 !i10b 1
 R31
-Z39 !s90 -reportprogress|300|-93|-work|work|../../src/seven_seg.vhd|
-Z40 !s107 ../../src/seven_seg.vhd|
+Z40 !s90 -reportprogress|300|-93|-work|work|../../src/seven_seg.vhd|
+Z41 !s107 ../../src/seven_seg.vhd|
 !i113 0
 R10
 R11
@@ -198,7 +198,7 @@ R1
 R2
 DEx4 work 9 seven_seg 0 22 4ZCUI;=IXS^=AHWgm?[J]2
 31
-R24
+R39
 l54
 L18
 VeQbKPHI;QOIBUK7AAdAQg0
@@ -206,30 +206,30 @@ VeQbKPHI;QOIBUK7AAdAQg0
 R6
 !i10b 1
 R31
-R39
 R40
+R41
 !i113 0
 R10
 R11
 Eseven_seg_tb
-Z41 w1474388910
+Z42 w1474388910
 R20
 R1
 R2
-Z42 dE:/College/four 1/hdl/labs/lab3_ssd/bcd/sim/script
-Z43 8../src/seven_seg_tb.vhd
-Z44 F../src/seven_seg_tb.vhd
+Z43 dE:/College/four 1/hdl/labs/lab3_ssd/bcd/sim/script
+Z44 8../src/seven_seg_tb.vhd
+Z45 F../src/seven_seg_tb.vhd
 l0
 L9
 V=Fn8URJ<?]?=oFC]eNCod3
 !s100 <[]cRiH?Cjz[eK]hRnh^O3
 R6
 31
-Z45 !s110 1474389425
+Z46 !s110 1474389425
 !i10b 1
-Z46 !s108 1474389425.000000
-Z47 !s90 -reportprogress|300|-93|-work|work|../src/seven_seg_tb.vhd|
-Z48 !s107 ../src/seven_seg_tb.vhd|
+Z47 !s108 1474389425.000000
+Z48 !s90 -reportprogress|300|-93|-work|work|../src/seven_seg_tb.vhd|
+Z49 !s107 ../src/seven_seg_tb.vhd|
 !i113 0
 R10
 R11
@@ -239,16 +239,16 @@ R1
 R2
 DEx4 work 12 seven_seg_tb 0 22 =Fn8URJ<?]?=oFC]eNCod3
 31
-R45
+R46
 l29
 L12
 V561jUkL:DB8gFB2i=f6Ml1
 !s100 cKHdeI:0g6BnnGXXozzYg2
 R6
 !i10b 1
-R46
 R47
 R48
+R49
 !i113 0
 R10
 R11
@@ -257,8 +257,8 @@ w1475595640
 R1
 R2
 R21
-Z49 8../src/toplevelcount_tb.vhd
-Z50 F../src/toplevelcount_tb.vhd
+Z50 8../src/toplevelcount_tb.vhd
+Z51 F../src/toplevelcount_tb.vhd
 l0
 L8
 VF2lKX__OBY865IfUAaP2g2
@@ -268,32 +268,32 @@ R6
 !s110 1475595648
 !i10b 1
 !s108 1475595648.000000
-Z51 !s90 -reportprogress|300|-93|-work|work|../src/toplevelcount_tb.vhd|
-Z52 !s107 ../src/toplevelcount_tb.vhd|
+Z52 !s90 -reportprogress|300|-93|-work|work|../src/toplevelcount_tb.vhd|
+Z53 !s107 ../src/toplevelcount_tb.vhd|
 !i113 0
 R10
 R11
 Etoplevelcount
-Z53 w1475599243
+Z54 w1475599243
 R35
 R36
 R20
 R1
 R2
 R21
-Z54 8../../src/toplevelcount.vhd
-Z55 F../../src/toplevelcount.vhd
+Z55 8../../src/toplevelcount.vhd
+Z56 F../../src/toplevelcount.vhd
 l0
 L6
 VAgb<bTP:i@cbh]2iUblk33
 !s100 b=c39h9RHjW>U_IOcj;Xz3
 R6
 31
-Z56 !s110 1475600179
+Z57 !s110 1476807495
 !i10b 1
 R25
-Z57 !s90 -reportprogress|300|-93|-work|work|../../src/toplevelcount.vhd|
-Z58 !s107 ../../src/toplevelcount.vhd|
+Z58 !s90 -reportprogress|300|-93|-work|work|../../src/toplevelcount.vhd|
+Z59 !s107 ../../src/toplevelcount.vhd|
 !i113 0
 R10
 R11
@@ -305,7 +305,7 @@ R1
 R2
 DEx4 work 13 toplevelcount 0 22 Agb<bTP:i@cbh]2iUblk33
 31
-R56
+R57
 l51
 L15
 V@:ifN3EgNUMjkna]0<h6N0
@@ -313,29 +313,29 @@ V@:ifN3EgNUMjkna]0<h6N0
 R6
 !i10b 1
 R25
-R57
 R58
+R59
 !i113 0
 R10
 R11
 Etoplevelcount_tb
-Z59 w1475599339
+Z60 w1475599339
 R1
 R2
 R21
-R49
 R50
+R51
 l0
 L8
 VazP000ZlQigBZQ8W]=BCd3
 !s100 ZP8nO0F^BRSbMS]Sz6m@o1
 R6
 31
-Z60 !s110 1475600181
+R39
 !i10b 1
-Z61 !s108 1475600181.000000
-R51
+Z61 !s108 1476807497.000000
 R52
+R53
 !i113 0
 R10
 R11
@@ -344,7 +344,7 @@ R1
 R2
 DEx4 work 16 toplevelcount_tb 0 22 azP000ZlQigBZQ8W]=BCd3
 31
-R60
+!s110 1476807498
 l30
 L11
 Vk@2XG:O1^Eof_GO_aC>IU1
@@ -352,8 +352,8 @@ Vk@2XG:O1^Eof_GO_aC>IU1
 R6
 !i10b 1
 R61
-R51
 R52
+R53
 !i113 0
 R10
 R11

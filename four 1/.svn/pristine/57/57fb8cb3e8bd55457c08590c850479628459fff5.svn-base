@@ -1,9 +1,0 @@
- entity  and2
-        port(a,b : in std_logic
-             z   : out std_logic)
-    end  and2
-
-architecture arch of and2 is
-begin
-    z <= a and b
-end arch;

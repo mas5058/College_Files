@@ -14,12 +14,13 @@ entity top is
 architecture arch of top is
 	signal asig,bsig : std_logic_vector(2 downto 0);
 	signal rezsig : std_logic_vector(3 downto 0);
-	signal addsig,subsig : std_logic;
-	
+	signal opersig : std_logic;
+
+
 	component alu is 
 	port (a,b : in std_logic_vector (3 downto 0);
 		  oper : in std_logic_vector(1 downto 0);
-		  result    : out std_logic_vector(3 downto 0);
+		  result    : out std_logic_vector(3 downto 0)
 	);
 	end component;
 	
@@ -49,14 +50,15 @@ architecture arch of top is
 		 reset   : in std_logic;
 		 hex0,hex1,hex2 : out std_logic_vector (6 downto 0)
 		 );
-		 end seven_seg;
+		 end component;
 		 
 	begin 
+	opersig <= add & sub;
 	add_sub: alu
 		port map(
 		a => asig,
 		b => bsig,
-		oper => add & sub,
+		oper => opersig,
 		result => rezsig);
 	
 	ssd: seven_seg
