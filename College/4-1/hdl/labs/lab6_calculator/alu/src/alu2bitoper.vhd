@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use IEEE.STD_LOGIC_ARITH.ALL;
+--use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+--each button is rising edge synchonized and each input is synchonized
+entity alu2bitoper is 
+	port (a,b : in std_logic_vector (7 downto 0);
+		  oper : in std_logic_vector(1 downto 0);
+		  result    : out std_logic_vector(7 downto 0)
+	);
+	end alu2bitoper;
+	
+
+	architecture arch of alu2bitoper is
+	signal rez : std_logic_vector(8 downto 0);
+	signal reztemp : std_logic_vector(15 downto 0);
+	begin
+	--result <= rez(7 downto 0);
+	result <= a+b;
+	-- process (a,b,oper,reztemp)
+	-- begin
+	-- case oper is
+		 -- when "00" => rez <= a + b;
+		 -- when "01" => rez <= a-b);
+		 -- when "10" => rez <= (unsigned(a) * unsigned(b));
+		-- when "11" => 
+			-- reztemp <= (std_logic_vector(unsigned("00000000" & a)/unsigned("00000000" & b)));
+			-- rez <= reztemp(7 downto 0);
+		-- when others => rez <= "00000000";
+		-- end case;
+		-- end process;
+	 end arch;
+	

@@ -1,0 +1,190 @@
+# //  ModelSim SE-64 10.5b May 21 2016
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
+# Start time: 22:23:59 on Oct 25,2016
+# vcom -reportprogress 300 -93 -work work ../../src/toplev.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity toplev
+# -- Compiling architecture arch of toplev
+# End time: 22:23:59 on Oct 25,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
+# Start time: 22:23:59 on Oct 25,2016
+# vcom -reportprogress 300 -93 -work work ../../src/alu2bitoper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu2bitoper
+# -- Compiling architecture arch of alu2bitoper
+# End time: 22:23:59 on Oct 25,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
+# Start time: 22:24:00 on Oct 25,2016
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity seven_seg
+# -- Compiling architecture arch of seven_seg
+# End time: 22:24:00 on Oct 25,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.5b Compiler 2016.05 May 21 2016
+# Start time: 22:24:00 on Oct 25,2016
+# vcom -reportprogress 300 -93 -work work ../src/toplev_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity toplev_tb
+# -- Compiling architecture beh of toplev_tb
+# ** Warning: ../src/toplev_tb.vhd(26): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 22:24:00 on Oct 25,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim -novopt toplev_tb 
+# Start time: 22:24:00 on Oct 25,2016
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Refreshing S:/Git/College/4-1/hdl/labs/lab6_calculator/calculator/sim/script/work.toplev_tb(beh)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.toplev_tb(beh)
+# Refreshing S:/Git/College/4-1/hdl/labs/lab6_calculator/calculator/sim/script/work.toplev(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.toplev(arch)
+# Refreshing S:/Git/College/4-1/hdl/labs/lab6_calculator/calculator/sim/script/work.seven_seg(arch)
+# Loading work.seven_seg(arch)
+# Refreshing S:/Git/College/4-1/hdl/labs/lab6_calculator/calculator/sim/script/work.alu2bitoper(arch)
+# Loading work.alu2bitoper(arch)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mas5058  Hostname: ECTET-1360-10  ProcessID: 31472
+#           Attempting to use alternate WLF file "./wlft3hg4ce".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3hg4ce
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/clk'.
+# Executing ONERROR command at macro ./wave.do line 11
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/reset'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/input'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/edge'.
+# Executing ONERROR command at macro ./wave.do line 17
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/uut/clk'.
+# Executing ONERROR command at macro ./wave.do line 19
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/uut/reset'.
+# Executing ONERROR command at macro ./wave.do line 21
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/uut/edge'.
+# Executing ONERROR command at macro ./wave.do line 23
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/uut/input'.
+# Executing ONERROR command at macro ./wave.do line 25
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/uut/input_z'.
+# Executing ONERROR command at macro ./wave.do line 27
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/uut/input_zz'.
+# Executing ONERROR command at macro ./wave.do line 29
+# ** Error: (vish-4014) No objects found matching '/rising_edge_synchronizer_tb/uut/input_zzz'.
+# Executing ONERROR command at macro ./wave.do line 31
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 1  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 3  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 4  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 120 ns  Iteration: 5  Instance: /toplev_tb/uut
+# End time: 22:24:09 on Oct 25,2016, Elapsed time: 0:00:09
+# Errors: 33, Warnings: 43

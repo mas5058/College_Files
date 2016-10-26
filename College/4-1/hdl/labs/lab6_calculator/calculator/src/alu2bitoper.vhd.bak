@@ -7,8 +7,8 @@ use ieee.numeric_std.all;
 --each button is rising edge synchonized and each input is synchonized
 entity alu2bitoper is 
 	port (a,b : in std_logic_vector (7 downto 0);
-		  oper : in std_logic_vector(1 downto 0);
-		  result    : out std_logic_vector(7 downto 0)
+		  oper : in std_logic_vector(1 downto 0)
+		  --result    : out std_logic_vector(7 downto 0)
 	);
 	end alu2bitoper;
 	
@@ -17,15 +17,14 @@ entity alu2bitoper is
 	signal rez : std_logic_vector(7 downto 0);
 	signal reztemp : std_logic_vector(15 downto 0);
 	begin
-	result <= rez(7 downto 0);
+	--result <= rez(7 downto 0);
 	rez <= std_logic_vector(unsigned(a)+unsigned(b));
 	 process (a,b,oper,reztemp)
 	 begin
 	 case oper is
 		  when "00" => rez <= std_logic_vector(unsigned(a)+unsigned(b));
 		  when "01" => rez <= std_logic_vector(unsigned(a)-unsigned(b));
-		  when "10" => reztemp <= std_logic_vector(unsigned(a)*unsigned(b));
-			       rez <= reztemp(7 downto 0);
+		  when "10" => rez <= std_logic_vector(unsigned(a)*unsigned(b));
 		 when "11" => 
 			 reztemp <= (std_logic_vector(unsigned("00000000" & a)/unsigned("00000000" & b)));
 			 rez <= reztemp(7 downto 0);
