@@ -14,8 +14,8 @@ entity alu2bitoper is
 	
 
 	architecture arch of alu2bitoper is
-	signal rez : std_logic_vector(7 downto 0);
-	signal reztemp : std_logic_vector(15 downto 0);
+	signal rez : std_logic_vector(7 downto 0) := (others => '0');
+	signal reztemp : std_logic_vector(15 downto 0) := (others => '0');
 	begin
 	result <= rez(7 downto 0);
 	rez <= std_logic_vector(unsigned(a)+unsigned(b));
