@@ -5,4 +5,4 @@ vcom -93 -work work ../../src/seven_seg.vhd
 vcom -93 -work work ../src/toplev_tb.vhd
 vsim -novopt toplev_tb
 do wave.do
-run 300 ns
+run 1000 ns
