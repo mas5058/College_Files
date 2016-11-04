@@ -67,12 +67,12 @@ end process;
     
 main: process 
   begin
-  reset <= '1';
+  --reset <= '1';
   execute <= '1';
   op <= "00";
   switches <= "00001000";
   wait for 100 ns;
-  reset <= '0';
+  --reset <= '0';
   wait for 100 ns;
   switches <= "00001001";
   wait for 100 ns;

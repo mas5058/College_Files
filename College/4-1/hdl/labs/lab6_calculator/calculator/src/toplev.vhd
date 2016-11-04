@@ -7,11 +7,12 @@ entity toplev is
     port(
     clk                   : in std_logic;
     reset                 : in std_logic;
+	execute           : in std_logic;
+	memsave           : in std_logic;
+	memrecall         : in std_logic;
 	switches              : in std_logic_vector(7 downto 0);
 	op                    : in std_logic_vector(1 downto 0);
-	-- memrecall              : in std_logic;
-	-- memsave               : in std_logic;
-	-- execute               : in std_logic;
+
     seven_seg_out1         : out std_logic_vector (6 downto 0);
     seven_seg_out2         : out std_logic_vector (6 downto 0);
     seven_seg_out3         : out std_logic_vector (6 downto 0)
@@ -20,9 +21,10 @@ end entity toplev;
 
 architecture arch of toplev is
 --datain and dataout removed from 8 bit
-signal rezsig, switchsig,addr : std_logic_vector(7 downto 0) := (others => '0');
+signal rezsig, switchsig : std_logic_vector(7 downto 0) := (others => '0');
 signal ones, tens, hundreds : std_logic_vector(3 downto 0) := (others => '0');
 signal result_padded : std_logic_vector(11 downto 0) := (others => '0');
+signal addr_sig : std_logic_vector(1 downto 0) := (others => '0');
 signal exsig, savesig,recallsig,wesig: std_logic;
 
 component alu2bitoper is
@@ -107,6 +109,24 @@ component seven_seg is
             oper => op,
             result => rezsig
             );
+	state:state_machine
+		port map(
+			clk => clk,
+			reset => reset,
+			memsave => memsave,
+			memrecall => memrecall,
+			address => addr_sig,
+			execute => execute,
+			we => wesig
+			);
+	memreg: memory
+		port map(
+			clk => clk,
+			we => wesig,
+			addr => addr_sig,
+			din => rezsig,
+			dout => result_padded
+			);
 	sumreg : process (reset,clk)
 	begin
 	if reset = '1' then
