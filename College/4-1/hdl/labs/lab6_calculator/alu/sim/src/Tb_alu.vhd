@@ -18,18 +18,18 @@ ARCHITECTURE behavior OF Tb_alu IS
   
  
  --Inputs
- signal a : signed(7 downto 0) := (others => '0');
- signal b : signed(7 downto 0) := (others => '0');
- signal result : signed(7 downto 0) := (others => '0');
+ signal a : std_logic_vector(7 downto 0) := (others => '0');
+ signal b : std_logic_vector(7 downto 0) := (others => '0');
+ signal result : std_logic_vector(7 downto 0) := (others => '0');
  signal oper : std_logic_vector(1 downto 0) := (others => '0');
  
  --Outputs
- signal out_alu : signed(3 downto 0);
+ --signal out_alu : signed(3 downto 0);
   
 BEGIN
   
  -- Instantiate the Unit Under Test (UUT)
- uut: alu PORT MAP (
+ uut: alu2bitoper PORT MAP (
  a => a,
  b => b,
  oper => oper,
@@ -45,7 +45,7 @@ BEGIN
  -- insert stimulus here 
  
  a <= "00001001";
- b <= "00001111";
+ b <= "00000011";
   
  oper <= "00";
  wait for 100 ns; 

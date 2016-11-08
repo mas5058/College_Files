@@ -137,6 +137,7 @@ component seven_seg is
 	--synchornize inputs
 		switchsig <= switches;
 	end if;
+	--wait;
 end process;
 
 bcd: process(result_padded)
@@ -192,6 +193,7 @@ bcd: process(result_padded)
     tens <= STD_LOGIC_VECTOR(bcd(7 downto 4));
     hundreds <= STD_LOGIC_VECTOR(bcd(11 downto 8));
     --thousands <= STD_LOGIC_VECTOR(bcd(15 downto 12));
+  --wait;
   end process bcd; 
 
 result_padded <= "0000" & rezsig;

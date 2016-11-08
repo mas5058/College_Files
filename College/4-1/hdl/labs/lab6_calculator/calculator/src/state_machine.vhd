@@ -37,7 +37,7 @@ begin
 process(clk,reset)
 begin 
   if (reset = '1') then 
-    state_reg <= reset;
+    state_reg <= (others => 0);
     we <= '0';
     address <= (others => 0);
   elsif (clk'event and clk = '1') then

@@ -37,8 +37,47 @@ add wave -noupdate -radix binary -radixshowbase 0 /toplev_tb/op
 add wave -noupdate -radix radix_ssd -radixshowbase 0 /toplev_tb/seven_seg_out1
 add wave -noupdate -radix radix_ssd -radixshowbase 0 /toplev_tb/seven_seg_out2
 add wave -noupdate -radix radix_ssd -radixshowbase 0 /toplev_tb/seven_seg_out3
+add wave -noupdate /toplev_tb/uut/clk
+add wave -noupdate /toplev_tb/uut/reset
+add wave -noupdate /toplev_tb/uut/execute
+add wave -noupdate /toplev_tb/uut/memsave
+add wave -noupdate /toplev_tb/uut/memrecall
+add wave -noupdate /toplev_tb/uut/switches
+add wave -noupdate /toplev_tb/uut/op
+add wave -noupdate /toplev_tb/uut/seven_seg_out1
+add wave -noupdate /toplev_tb/uut/seven_seg_out2
+add wave -noupdate /toplev_tb/uut/seven_seg_out3
+add wave -noupdate /toplev_tb/uut/rezsig
+add wave -noupdate /toplev_tb/uut/switchsig
+add wave -noupdate /toplev_tb/uut/ones
+add wave -noupdate /toplev_tb/uut/tens
+add wave -noupdate /toplev_tb/uut/hundreds
+add wave -noupdate /toplev_tb/uut/result_padded
+add wave -noupdate /toplev_tb/uut/addr_sig
+add wave -noupdate /toplev_tb/uut/exsig
+add wave -noupdate /toplev_tb/uut/savesig
+add wave -noupdate /toplev_tb/uut/recallsig
+add wave -noupdate /toplev_tb/uut/wesig
+add wave -noupdate /toplev_tb/uut/ssd1/inputs
+add wave -noupdate /toplev_tb/uut/ssd1/clk
+add wave -noupdate /toplev_tb/uut/ssd1/reset
+add wave -noupdate /toplev_tb/uut/ssd1/hex0
+add wave -noupdate /toplev_tb/uut/ssd2/inputs
+add wave -noupdate /toplev_tb/uut/ssd2/clk
+add wave -noupdate /toplev_tb/uut/ssd2/reset
+add wave -noupdate /toplev_tb/uut/ssd2/hex0
+add wave -noupdate /toplev_tb/uut/ssd3/inputs
+add wave -noupdate /toplev_tb/uut/ssd3/clk
+add wave -noupdate /toplev_tb/uut/ssd3/reset
+add wave -noupdate /toplev_tb/uut/ssd3/hex0
+add wave -noupdate /toplev_tb/uut/alu/a
+add wave -noupdate /toplev_tb/uut/alu/b
+add wave -noupdate /toplev_tb/uut/alu/oper
+add wave -noupdate /toplev_tb/uut/alu/result
+add wave -noupdate /toplev_tb/uut/alu/rez
+add wave -noupdate /toplev_tb/uut/alu/reztemp
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {883 ns} 0}
+WaveRestoreCursors {{Cursor 1} {106 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 163
 configure wave -valuecolwidth 100

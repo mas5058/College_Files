@@ -14,22 +14,22 @@ entity alu2bitoper is
 	
 
 	architecture arch of alu2bitoper is
-	signal rez : std_logic_vector(7 downto 0) := (others => '0');
-	signal reztemp : std_logic_vector(15 downto 0) := (others => '0');
+	signal result_sig : std_logic_vector(7 downto 0) := (others => '0');
+	signal result_sigtemp : std_logic_vector(15 downto 0) := (others => '0');
 	begin
-	result <= rez(7 downto 0);
-	rez <= std_logic_vector(unsigned(a)+unsigned(b));
-	 process (a,b,oper,reztemp)
+	result <= result_sig(7 downto 0);
+	--result_sig <= std_logic_vector(unsigned(a)+unsigned(b));
+	 process (a,b,oper,result_sigtemp,result_sig)
 	 begin
 	 case oper is
-		  when "00" => rez <= std_logic_vector(unsigned(a)+unsigned(b));
-		  when "01" => rez <= std_logic_vector(unsigned(a)-unsigned(b));
-		  when "10" => reztemp <= std_logic_vector(unsigned(a)*unsigned(b));
-			       rez <= reztemp(7 downto 0);
+		  when "00" => result_sig <= std_logic_vector(unsigned(a)+unsigned(b));
+		  when "01" => result_sig <= std_logic_vector(unsigned(a)-unsigned(b));
+		  when "10" => result_sigtemp <= std_logic_vector(unsigned(a)*unsigned(b));
+			       result_sig <= result_sigtemp(7 downto 0);
 		 when "11" => 
-			 reztemp <= (std_logic_vector(unsigned("00000000" & a)/unsigned("00000000" & b)));
-			 rez <= reztemp(7 downto 0);
-		 when others => rez <= "00000000";
+			 result_sigtemp <= (std_logic_vector(unsigned("00000000" & a)/unsigned("00000000" & b)));
+			 result_sig <= result_sigtemp(7 downto 0);
+		 when others => result_sig <= "00000000";
 		 end case;
 		 end process;
 	 end arch;

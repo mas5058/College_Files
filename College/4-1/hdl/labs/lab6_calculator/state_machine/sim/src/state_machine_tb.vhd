@@ -14,30 +14,35 @@ component state_machine
   port (
     clk               : in std_logic;
     reset             : in std_logic;
-    nearby_opponent   : in std_logic;
-    friend_wounded    : in std_logic;
-    me_wounded        : in std_logic;
-    fighting          : out std_logic
+    execute           : in std_logic;
+    memsave           : in std_logic;
+    memrecall         : in std_logic;
+    we                : out std_logic;
+    address           : out std_logic_vector(1 downto 0)
   );
   end component;
   
 constant period         : time := 20ns;                                              
 signal clk              : std_logic := '0';
 signal reset            : std_logic := '1';
-signal nearby_opponent  : std_logic := '0';
-signal friend_wounded   : std_logic := '0';
-signal me_wounded       : std_logic := '0';
-signal fighting         : std_logic;
+signal execute          : std_logic := '0';
+signal memsave          : std_logic := '0';
+signal memrecall          : std_logic := '0';
+signal we          : std_logic := '0';
+signal address         : std_logic_vector := "00";
 
 begin 
 uut: state_machine 
   port map(
     clk               => clk,
     reset             => reset,
-    nearby_opponent   => nearby_opponent,
-    friend_wounded    => friend_wounded,
-    me_wounded        => me_wounded,
-    fighting          => fighting
+    execute             => execute,
+    memsave             => memsave,
+    memrecall             => memrecall,
+    reset             => reset,
+    address             => address
+	
+    
   );
  
 -- clock process
@@ -57,19 +62,17 @@ end process;
     
 main: process 
   begin
-    assert false report "****************** TB Start ****************" severity note;
-    wait for 65 ns;     
-    assert(fighting = '0') report "should be waiting";
-    nearby_opponent <= '1';
-    wait for 20 ns;          
-    assert(fighting = '1') report "should be fighting";
-    friend_wounded  <= '1';
-    wait for 20 ns;
-    assert(fighting = '0') report "should be healing";
-    me_wounded      <= '1';
-    wait for 20 ns;
-    assert(fighting = '0') report "should be fleaing";
-    assert false report "****************** TB Finish ****************" severity note;
+    --assert false report "****************** TB Start ****************" severity note;
+	reset <= '1';
+	wait for 10 ns;
+	reset <= '0';
+	wait for 10 ns;
+	execute <= '1';
+	wait for 50 ns;
+	execute <= '0';
+	memsave <= '1';
+	wait for 30 ns;
+	memrecall <= '1';
     wait;
   end process;  
 end beh;
